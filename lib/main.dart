@@ -1,7 +1,58 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-void main() {
-  runApp(const MyApp());
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:layout/layout.dart';
+import 'package:personal_portfolio/lang/lang.dart';
+import 'package:personal_portfolio/route/route.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await _initApp();
+
+  runApp(const App());
+}
+
+Future _initApp() async {
+  final futures = <Future>[
+    EasyLocalization.ensureInitialized(),
+  ];
+  RouteApp.initRoutes();
+  EasyLocalization.logger.enableBuildModes = [];
+
+  await Future.wait(futures);
+}
+
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        systemNavigationBarColor: Colors.transparent,
+        statusBarColor: Colors.transparent,
+        systemNavigationBarContrastEnforced: true,
+        systemStatusBarContrastEnforced: true,
+        statusBarBrightness: Brightness.light,
+      ),
+    );
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.edgeToEdge,
+    );
+
+    return EasyLocalization(
+      supportedLocales: const [
+        Locale('en'),
+        Locale('it'),
+      ],
+      fallbackLocale: const Locale('en', 'US'),
+      useOnlyLangCode: true,
+      path: 'translations',
+      assetLoader: const CodegenLoader(),
+      child: const MyApp(),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -9,58 +60,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Personal Portfolio',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+    return Layout(
+      child: MaterialApp.router(
+        routeInformationParser: RouteApp.routeInformationParser,
+        restorationScopeId: 'root',
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        routerDelegate: RouteApp.routemaster,
       ),
     );
   }
