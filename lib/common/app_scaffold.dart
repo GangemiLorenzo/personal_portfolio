@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:layout/layout.dart';
 import 'package:personal_portfolio/common/common.dart';
 import 'package:personal_portfolio/lang/lang.dart';
-import 'package:personal_portfolio/route/route.dart';
+import 'package:personal_portfolio/routes/routes.dart';
+import 'package:personal_portfolio/theme/theme.dart';
+import 'package:provider/provider.dart';
 import 'package:routemaster/routemaster.dart';
+
+double mediumWidth = 700;
+double largeWidth = 900;
 
 class AppScaffold extends StatefulWidget {
   const AppScaffold({
@@ -11,91 +15,76 @@ class AppScaffold extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _AppScaffoldState createState() => _AppScaffoldState();
+  State<AppScaffold> createState() => _AppScaffoldState();
 }
 
 class _AppScaffoldState extends State<AppScaffold> {
-  bool extended = true;
+  late ThemeRepo themeRepo;
+
+  @override
+  void initState() {
+    themeRepo = context.read<ThemeRepo>();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     final pageIndex = TabPage.of(context).controller.index;
 
-    return WillPopScope(
-      onWillPop: _onWillPop,
-      child: Scaffold(
-        appBar: const TopBar(
-          label: 'patchai',
-          actions: [
-            // IconButton(
-            //   icon: const Icon(Icons.settings),
-            //   onPressed: () {
-            //     RouteApp.routemaster.push('/settings');
-            //   },
-            // ),
-          ],
-        ),
-        body: Row(
-          children: [
-            if (context.layout.breakpoint > LayoutBreakpoint.sm) ...[
-              NavigationSideBar(
-                selectedIndex: pageIndex,
-                onIndexSelect: _onIndexSelect,
-                extended: extended,
-              ),
-              const VerticalDivider(thickness: 1, width: 1),
-            ],
-            Expanded(
-              child: PageStackNavigator(
-                key: ValueKey(pageIndex),
-                stack: TabPage.of(context).stacks[pageIndex],
-              ),
+    if (isSmall(context)) {
+      return Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: PageStackNavigator(
+              key: ValueKey(pageIndex),
+              stack: TabPage.of(context).stacks[pageIndex],
             ),
-          ],
+          ),
         ),
-        bottomNavigationBar: context.layout.breakpoint < LayoutBreakpoint.md
-            ? NavigationBottomBar(
-                selectedIndex: pageIndex,
-                onIndexSelect: _onIndexSelect,
-              )
-            : null,
-      ),
-    );
-  }
-
-  void onExtendedSelect() {
-    setState(() {
-      extended = !extended;
-    });
+        bottomNavigationBar: NavigationBottomBar(
+          selectedIndex: pageIndex,
+          onIndexSelect: _onIndexSelect,
+        ),
+      );
+    } else {
+      return Scaffold(
+        body: Center(
+          child: SizedBox(
+            width: isMedium(context) ? mediumWidth : largeWidth,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                NavigationSideBar(
+                  selectedIndex: pageIndex,
+                  onIndexSelect: _onIndexSelect,
+                ),
+                Expanded(
+                  child: SafeArea(
+                    child: Center(
+                      child: PageStackNavigator(
+                        key: ValueKey(pageIndex),
+                        stack: TabPage.of(context).stacks[pageIndex],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
   }
 
   Future<void> _onIndexSelect(newIndex) async {
     switch (newIndex) {
       case 0:
-        RouteApp.routemaster.push('/page1');
+        RouteApp.routemaster.push(HOME);
         break;
       case 1:
-        RouteApp.routemaster.push('/page2');
+        themeRepo.switchTheme();
         break;
-      case 2:
-        RouteApp.routemaster.push('/page3');
-        break;
-      default:
-        RouteApp.routemaster.push('/');
     }
-  }
-
-  Future<bool> _onWillPop() async {
-    final pageIndex = TabPage.of(context).controller.index;
-
-    final isHomePage = pageIndex != 0;
-    if (isHomePage) {
-      setState(() {
-        _onIndexSelect(0);
-      });
-    }
-
-    return !isHomePage;
   }
 }
 
@@ -111,24 +100,22 @@ class NavigationBottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      currentIndex: selectedIndex,
-      onTap: onIndexSelect,
-      items: [
-        BottomNavigationBarItem(
+    return NavigationBar(
+      selectedIndex: selectedIndex,
+      onDestinationSelected: onIndexSelect,
+      destinations: [
+        NavigationDestination(
           icon: const Icon(Icons.person_outline),
-          activeIcon: const Icon(Icons.person),
-          label: LocaleKeys.page1.tr(),
+          selectedIcon: const Icon(Icons.person),
+          label: LocaleKeys.home.tr(),
         ),
-        BottomNavigationBarItem(
-          icon: const Icon(Icons.work_outline),
-          activeIcon: const Icon(Icons.work),
-          label: LocaleKeys.page2.tr(),
-        ),
-        BottomNavigationBarItem(
-          icon: const Icon(Icons.timeline_outlined),
-          activeIcon: const Icon(Icons.timeline),
-          label: LocaleKeys.page3.tr(),
+        NavigationDestination(
+          icon: Icon(
+            context.read<ThemeRepo>().themeMode == ThemeMode.dark
+                ? Icons.light_mode
+                : Icons.dark_mode,
+          ),
+          label: LocaleKeys.brightness.tr(),
         ),
       ],
     );
@@ -139,11 +126,9 @@ class NavigationSideBar extends StatelessWidget {
   const NavigationSideBar({
     required this.selectedIndex,
     required this.onIndexSelect,
-    required this.extended,
     Key? key,
   }) : super(key: key);
 
-  final bool extended;
   final Function(int) onIndexSelect;
   final int selectedIndex;
 
@@ -152,20 +137,42 @@ class NavigationSideBar extends StatelessWidget {
     return NavigationRail(
       selectedIndex: selectedIndex,
       onDestinationSelected: onIndexSelect,
-      labelType: NavigationRailLabelType.none,
-      extended: extended,
+      labelType: NavigationRailLabelType.all,
+      groupAlignment: 0.0,
       destinations: [
         NavigationRailDestination(
-          icon: const Icon(Icons.wb_sunny),
-          label: Text(LocaleKeys.page1.tr()),
+          icon: const Icon(Icons.person_outline),
+          selectedIcon: Container(
+            height: 32,
+            width: 64,
+            decoration: BoxDecoration(
+                color: Theme.of(context).myPalette.secondaryContainer,
+                borderRadius: const BorderRadius.all(Radius.circular(16.0))),
+            child: const Icon(
+              Icons.person,
+            ),
+          ),
+          label: Text(LocaleKeys.home.tr()),
         ),
         NavigationRailDestination(
-          icon: const Icon(Icons.person),
-          label: Text(LocaleKeys.page2.tr()),
-        ),
-        NavigationRailDestination(
-          icon: const Icon(Icons.list),
-          label: Text(LocaleKeys.page3.tr()),
+          icon: Icon(
+            context.read<ThemeRepo>().themeMode == ThemeMode.dark
+                ? Icons.light_mode
+                : Icons.dark_mode,
+          ),
+          selectedIcon: Container(
+            height: 32,
+            width: 64,
+            decoration: BoxDecoration(
+                color: Theme.of(context).myPalette.secondaryContainer,
+                borderRadius: const BorderRadius.all(Radius.circular(16.0))),
+            child: Icon(
+              context.read<ThemeRepo>().themeMode == ThemeMode.dark
+                  ? Icons.light_mode
+                  : Icons.dark_mode,
+            ),
+          ),
+          label: Text(LocaleKeys.brightness.tr()),
         ),
       ],
     );

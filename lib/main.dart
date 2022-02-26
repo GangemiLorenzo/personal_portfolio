@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:layout/layout.dart';
 import 'package:personal_portfolio/lang/lang.dart';
-import 'package:personal_portfolio/route/route.dart';
+import 'package:personal_portfolio/routes/routes.dart';
+import 'package:personal_portfolio/theme/theme_repo.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -50,6 +52,24 @@ class App extends StatelessWidget {
       useOnlyLangCode: true,
       path: 'translations',
       assetLoader: const CodegenLoader(),
+      child: const AppProvider(),
+    );
+  }
+}
+
+class AppProvider extends StatelessWidget {
+  const AppProvider({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => ThemeRepo(),
+        ),
+      ],
       child: const MyApp(),
     );
   }
@@ -64,10 +84,14 @@ class MyApp extends StatelessWidget {
       child: MaterialApp.router(
         routeInformationParser: RouteApp.routeInformationParser,
         restorationScopeId: 'root',
+        themeMode: context.watch<ThemeRepo>().themeMode,
+        darkTheme: context.read<ThemeRepo>().darkTheme,
+        theme: context.read<ThemeRepo>().lightTheme,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
         routerDelegate: RouteApp.routemaster,
+        debugShowCheckedModeBanner: false,
       ),
     );
   }

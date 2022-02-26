@@ -25,17 +25,6 @@ class _TopBarState extends State<TopBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      // title: Stack(
-      //   alignment: Alignment.center,
-      //   children: [
-      //     const SizedBox(
-      //       width: 20,
-      //       height: 20,
-      //       child: BlurWidget(),
-      //     ),
-      //     if (widget.label != null) Text(widget.label!),
-      //   ],
-      // ),
       actions: widget.actions,
       elevation: context.layout.breakpoint > LayoutBreakpoint.sm ? 1 : 0,
       centerTitle: true,

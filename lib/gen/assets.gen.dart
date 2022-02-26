@@ -7,6 +7,14 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsProfileGen {
+  const $AssetsProfileGen();
+
+  /// File path: assets/profile/profile.jpeg
+  AssetGenImage get profile =>
+      const AssetGenImage('assets/profile/profile.jpeg');
+}
+
 class $AssetsTranslationsGen {
   const $AssetsTranslationsGen();
 
@@ -20,6 +28,7 @@ class $AssetsTranslationsGen {
 class Assets {
   Assets._();
 
+  static const $AssetsProfileGen profile = $AssetsProfileGen();
   static const $AssetsTranslationsGen translations = $AssetsTranslationsGen();
 }
 
