@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/common/card_container.dart';
 import 'package:personal_portfolio/common/stroke_grid_pattern.dart';
 import 'package:personal_portfolio/common/utils.dart';
 import 'package:personal_portfolio/lang/lang.dart';
@@ -43,21 +42,6 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ],
-              ),
-              CardM3Filled(
-                style: CardStyle.primary,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      LocaleKeys.mobile_web_dev.tr(),
-                      style: Theme.of(context).myTypography.subtitle1.copyWith(
-                            color:
-                                Theme.of(context).myPalette.onPrimaryContainer,
-                          ),
-                    ),
-                  ],
-                ),
               ),
               const SizedBox(
                 height: 64,
