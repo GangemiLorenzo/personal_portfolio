@@ -26,55 +26,93 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: SizedBox(
-                      height: 360,
-                      child: StrokeGridPattern(
-                        paddingHorizontal: 16,
-                        paddingVertical: 64,
-                        actionRange: 200,
-                        strokeWidth: 1,
-                        strokeColor: Theme.of(context).myPalette.primary,
-                        strokeLength: 12.0,
+              if (!isSmall(context))
+                Row(
+                  children: [
+                    Expanded(
+                      child: SizedBox(
+                        height: 360,
+                        child: StrokeGridPattern(
+                          paddingHorizontal: 16,
+                          paddingVertical: 64,
+                          actionRange: 200,
+                          strokeWidth: 1,
+                          strokeColor: Theme.of(context).myPalette.primary,
+                          strokeLength: 12.0,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 64,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        LocaleKeys.hey.tr(),
-                        style: Theme.of(context).myTypography.headline2,
+                  ],
+                ),
+              if (!isSmall(context))
+                const SizedBox(
+                  height: 64,
+                ),
+              if (!isSmall(context))
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            LocaleKeys.hey.tr(),
+                            style: Theme.of(context).myTypography.headline2,
+                          ),
+                          Text(
+                            LocaleKeys.description.tr(),
+                            style: Theme.of(context).myTypography.subtitle1,
+                          ),
+                        ],
                       ),
-                      Text(
+                    ),
+                    const SizedBox(
+                      width: 16.0,
+                    ),
+                    CircleAvatar(
+                      radius: isMedium(context) ? 32 : 48,
+                      backgroundColor: Theme.of(context).myPalette.onSurface,
+                      child: CircleAvatar(
+                        radius: isMedium(context) ? 28 : 44,
+                        backgroundColor: Theme.of(context).myPalette.onSurface,
+                        backgroundImage:
+                            const AssetImage('assets/profile/profile.jpeg'),
+                      ),
+                    )
+                  ],
+                ),
+              if (isSmall(context))
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(
+                      height: 16.0,
+                    ),
+                    CircleAvatar(
+                      radius: isMedium(context) ? 32 : 48,
+                      backgroundColor: Theme.of(context).myPalette.onSurface,
+                      child: CircleAvatar(
+                        radius: isMedium(context) ? 28 : 44,
+                        backgroundColor: Theme.of(context).myPalette.onSurface,
+                        backgroundImage:
+                            const AssetImage('assets/profile/profile.jpeg'),
+                      ),
+                    ),
+                    Text(
+                      LocaleKeys.hey.tr(),
+                      style: Theme.of(context).myTypography.headline2,
+                    ),
+                    Center(
+                      child: Text(
                         LocaleKeys.description.tr(),
+                        textAlign: TextAlign.center,
                         style: Theme.of(context).myTypography.subtitle1,
                       ),
-                    ],
-                  ),
-                  CircleAvatar(
-                    radius: isMedium(context) ? 32 : 48,
-                    backgroundColor: Theme.of(context).myPalette.onSurface,
-                    child: CircleAvatar(
-                      radius: isMedium(context) ? 28 : 44,
-                      backgroundColor: Theme.of(context).myPalette.onSurface,
-                      backgroundImage:
-                          const AssetImage('assets/profile/profile.jpeg'),
                     ),
-                  )
-                ],
-              ),
+                  ],
+                ),
               Section(
                 color: Theme.of(context).myPalette.primary,
                 title: LocaleKeys.bio.tr(),
