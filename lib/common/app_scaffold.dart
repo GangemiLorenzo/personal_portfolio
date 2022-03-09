@@ -110,10 +110,8 @@ class NavigationBottomBar extends StatelessWidget {
           label: LocaleKeys.home.tr(),
         ),
         NavigationDestination(
-          icon: Icon(
-            context.read<ThemeRepo>().themeMode == ThemeMode.dark
-                ? Icons.light_mode
-                : Icons.dark_mode,
+          icon: const Icon(
+            Icons.light_mode,
           ),
           label: LocaleKeys.brightness.tr(),
         ),
