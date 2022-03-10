@@ -1,3 +1,3 @@
-# personal_portfolio
+# Personal portfolio
 
-Portfolio app built in Flutter for web.
+My Portfolio web app, built entirely in Flutter for web.
