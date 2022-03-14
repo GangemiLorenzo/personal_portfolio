@@ -3,7 +3,7 @@ import 'package:personal_portfolio/common/common.dart';
 import 'package:personal_portfolio/gen/assets.gen.dart';
 import 'package:personal_portfolio/lang/lang.dart';
 import 'package:personal_portfolio/pages/home/view/widget/section.dart';
-import 'package:personal_portfolio/theme/theme_extension.dart';
+import 'package:personal_portfolio/theme/theme.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -78,6 +78,9 @@ class HomePage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const _MyAvatar(),
+                        const SizedBox(
+                          height: 16.0,
+                        ),
                         Text(
                           LocaleKeys.hey.tr(),
                           style: Theme.of(context).myTypography.headline2,
@@ -95,43 +98,42 @@ class HomePage extends StatelessWidget {
                 content: LocaleKeys.bio_text.tr(),
               ),
               Section(
-                color: Theme.of(context).myPalette.tertiary,
+                color: Theme.of(context).myPalette.primary,
                 title: LocaleKeys.tech.tr(),
                 content: LocaleKeys.tech_text.tr(),
-                action: () => {},
-                actionColor: Theme.of(context).myPalette.tertiaryContainer,
-                actionText: LocaleKeys.go.tr(),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  SkillIndicator(
-                    color: Theme.of(context).myPalette.primary,
-                    backgroundColor:
-                        Theme.of(context).myPalette.primaryContainer,
-                    progress: 70,
-                    icon: Icons.flutter_dash,
-                  ),
-                  SkillIndicator(
-                    color: Theme.of(context).myPalette.secondary,
-                    backgroundColor:
-                        Theme.of(context).myPalette.secondaryContainer,
-                    progress: 50,
-                    icon: Icons.flutter_dash,
-                  ),
-                  SkillIndicator(
-                    color: Theme.of(context).myPalette.tertiary,
-                    backgroundColor:
-                        Theme.of(context).myPalette.tertiaryContainer,
-                    progress: 80,
-                    icon: Icons.flutter_dash,
-                  ),
-                ],
-              ),
-              Section(
-                color: Theme.of(context).myPalette.secondary,
-                title: 'Work',
-                content: LocaleKeys.bio_text.tr(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: const [
+                    SkillIndicator(
+                      color: Color.fromARGB(255, 81, 192, 240),
+                      backgroundColor: Color.fromARGB(70, 81, 192, 240),
+                      progress: 90,
+                      icon: MyIcons.flutter_original,
+                      iconColor: Color.fromARGB(255, 81, 192, 240),
+                    ),
+                    SkillIndicator(
+                      color: Color.fromARGB(255, 63, 185, 132),
+                      backgroundColor: Color.fromARGB(70, 63, 185, 132),
+                      progress: 60,
+                      icon: MyIcons.vuejs_original,
+                      iconColor: Color.fromARGB(255, 63, 185, 132),
+                    ),
+                    SkillIndicator(
+                      color: Color.fromARGB(255, 0, 167, 209),
+                      backgroundColor: Color.fromARGB(70, 0, 167, 209),
+                      progress: 50,
+                      icon: MyIcons.go_original,
+                      iconColor: Color.fromARGB(255, 0, 167, 209),
+                    ),
+                    SkillIndicator(
+                      color: Color.fromARGB(255, 255, 202, 44),
+                      backgroundColor: Color.fromARGB(70, 255, 202, 44),
+                      progress: 80,
+                      icon: MyIcons.firebase_plain,
+                      iconColor: Color.fromARGB(255, 255, 202, 44),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 64,

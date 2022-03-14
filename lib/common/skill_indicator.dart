@@ -6,6 +6,7 @@ class SkillIndicator extends StatelessWidget {
     required this.backgroundColor,
     required this.progress,
     required this.icon,
+    this.iconColor,
     Key? key,
   }) : super(key: key);
 
@@ -13,6 +14,7 @@ class SkillIndicator extends StatelessWidget {
   final Color backgroundColor;
   final int progress;
   final IconData icon;
+  final Color? iconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +52,10 @@ class SkillIndicator extends StatelessWidget {
           const SizedBox(
             width: 16.0,
           ),
-          Icon(icon)
+          Icon(
+            icon,
+            color: iconColor,
+          )
         ],
       ),
     );

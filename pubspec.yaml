@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   easy_localization: ^3.0.0
+  flutter_devicon: ^1.0.1
   layout: ^1.0.2
   provider: ^6.0.1
   routemaster: ^0.10.0-dev5
@@ -31,6 +32,12 @@ flutter:
   assets:
     - assets/translations/
     - assets/profile/
+    - assets/fonts/
+
+  fonts:
+    - family: MyIcons
+      fonts:
+      - asset: assets/fonts/MyIcons.ttf
 
 flutter_gen:
   output: lib/gen/
