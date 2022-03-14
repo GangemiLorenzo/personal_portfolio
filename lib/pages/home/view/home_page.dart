@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/common/common.dart';
 import 'package:personal_portfolio/core/lang/lang.dart';
-import 'package:personal_portfolio/gen/assets.gen.dart';
+import 'package:personal_portfolio/pages/home/view/widget/my_avatar.dart';
 import 'package:personal_portfolio/pages/home/view/widget/my_skills.dart';
 import 'package:personal_portfolio/pages/home/view/widget/section.dart';
 import 'package:personal_portfolio/theme/theme.dart';
@@ -72,13 +72,13 @@ class HomePage extends StatelessWidget {
                         const SizedBox(
                           width: 16.0,
                         ),
-                        const _MyAvatar(),
+                        const MyAvatar(),
                       ],
                     )
                   : Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        const _MyAvatar(),
+                        const MyAvatar(),
                         const SizedBox(
                           height: 16.0,
                         ),
@@ -110,25 +110,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class _MyAvatar extends StatelessWidget {
-  const _MyAvatar({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return CircleAvatar(
-      radius: isMedium(context) ? 32 : 48,
-      backgroundColor: Theme.of(context).myPalette.onSurface,
-      child: CircleAvatar(
-        radius: isMedium(context) ? 28 : 44,
-        backgroundColor: Theme.of(context).myPalette.onSurface,
-        backgroundImage: AssetImage(Assets.profile.profile.path),
       ),
     );
   }
