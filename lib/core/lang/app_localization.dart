@@ -15,6 +15,7 @@ class CodegenLoader extends AssetLoader{
   }
 
   static const Map<String,dynamic> en = {
+  "title": "Lorenzo Gangemi",
   "home": "Home",
   "projects": "Projects",
   "timeline": "Timeline",
@@ -30,6 +31,7 @@ class CodegenLoader extends AssetLoader{
   "brightness": "Brightness"
 };
 static const Map<String,dynamic> it = {
+  "title": "Lorenzo Gangemi",
   "home": "Home",
   "projects": "Progetti",
   "timeline": "Timeline",

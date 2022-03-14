@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/common/common.dart';
-import 'package:personal_portfolio/lang/lang.dart';
+import 'package:personal_portfolio/core/lang/lang.dart';
 import 'package:personal_portfolio/routes/routes.dart';
 
 class NotFoundPage extends StatelessWidget {

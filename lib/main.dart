@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:layout/layout.dart';
-import 'package:personal_portfolio/lang/lang.dart';
+import 'package:personal_portfolio/core/lang/lang.dart';
 import 'package:personal_portfolio/routes/routes.dart';
 import 'package:personal_portfolio/theme/theme_repo.dart';
 import 'package:provider/provider.dart';

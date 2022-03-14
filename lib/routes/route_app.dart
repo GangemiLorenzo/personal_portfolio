@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:personal_portfolio/common/common.dart';
-import 'package:personal_portfolio/lang/lang.dart';
+import 'package:personal_portfolio/core/lang/lang.dart';
 import 'package:personal_portfolio/pages/pages.dart';
 import 'package:routemaster/routemaster.dart';
 
