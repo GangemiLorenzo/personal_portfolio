@@ -109,43 +109,56 @@ class HomePage extends StatelessWidget {
                 title: LocaleKeys.timeline.tr(),
                 child: Column(
                   children: [
-                    IntrinsicHeight(
-                      child: Row(
-                        children: const [
-                          Expanded(
-                            flex: 1,
-                            child: Center(
-                              child: Text('2016'),
-                            ),
+                    Row(
+                      children: const [
+                        Expanded(
+                          flex: 1,
+                          child: Center(
+                            child: Text('2016'),
                           ),
-                          Expanded(
-                              flex: 4,
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(vertical: 16.0),
-                                child: Text(
-                                    'Questo è un testo di prova.\nHo lavorato come sviluppatore Android in Java Nativo per MDPtech'),
-                              )),
-                        ],
-                      ),
+                        ),
+                        Expanded(
+                            flex: 4,
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(vertical: 16.0),
+                              child: Text(
+                                  'MDPtech\nManta, Italia\nSviluppo Android Nativo e Web'),
+                            )),
+                      ],
                     ),
-                    IntrinsicHeight(
-                      child: Row(
-                        children: const [
-                          Expanded(
-                            flex: 1,
-                            child: Center(
-                              child: Text('2016'),
-                            ),
+                    Row(
+                      children: const [
+                        Expanded(
+                          flex: 1,
+                          child: Center(
+                            child: Text('2020'),
                           ),
-                          Expanded(
-                              flex: 4,
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(vertical: 16.0),
-                                child: Text(
-                                    'Questo è un testo di prova.\nHo lavorato come sviluppatore Android in Java Nativo per MDPtech'),
-                              )),
-                        ],
-                      ),
+                        ),
+                        Expanded(
+                            flex: 4,
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(vertical: 16.0),
+                              child: Text(
+                                  'StarTy\nRemote\nSviluppo Flutter e Firebase'),
+                            )),
+                      ],
+                    ),
+                    Row(
+                      children: const [
+                        Expanded(
+                          flex: 1,
+                          child: Center(
+                            child: Text('2021'),
+                          ),
+                        ),
+                        Expanded(
+                            flex: 4,
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(vertical: 16.0),
+                              child: Text(
+                                  'Patchai, an Alira Health company\nRemote\nSoftware Engineer, Flutter e Go'),
+                            )),
+                      ],
                     ),
                   ],
                 ),

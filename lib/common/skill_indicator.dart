@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class SkillIndicator extends StatefulWidget {
@@ -36,7 +34,11 @@ class _SkillIndicatorState extends State<SkillIndicator>
       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
     _progress = widget.progress * 10 + _animation.value as int;
-    int delay = Random().nextInt(500) + 500;
+
+    List list = List.generate(500, (i) => i);
+    list.shuffle();
+    int delay = list[0] + 500;
+
     Future.delayed(Duration(milliseconds: delay), () {
       _animationController.repeat(reverse: true);
     });
