@@ -6,7 +6,7 @@ class Section extends StatelessWidget {
   const Section({
     required this.color,
     required this.title,
-    required this.content,
+    this.content,
     this.actionText,
     this.action,
     this.actionColor,
@@ -16,7 +16,7 @@ class Section extends StatelessWidget {
 
   final Color color;
   final String title;
-  final String content;
+  final String? content;
   final String? actionText;
   final Function? action;
   final Color? actionColor;
@@ -41,16 +41,18 @@ class Section extends StatelessWidget {
                 ),
           ),
           const Divider(),
-          const SizedBox(
-            height: 8,
-          ),
-          Text(
-            content,
-            style: Theme.of(context).myTypography.bodyText1,
-          ),
-          if (action != null)
+          if (content != null)
             const SizedBox(
-              height: 16,
+              height: 8,
+            ),
+          if (content != null)
+            Text(
+              content!,
+              style: Theme.of(context).myTypography.bodyText1,
+            ),
+          if (action != null || child != null)
+            const SizedBox(
+              height: 32,
             ),
           if (action != null)
             Row(

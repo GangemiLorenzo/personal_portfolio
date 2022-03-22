@@ -42,7 +42,7 @@ static const Map<String,dynamic> it = {
   "hey": "Ciao! Sono Lorenzo 👋",
   "description": "Ingegnere Software, Sviluppatore e appassionato di tecnologia.",
   "bio": "Bio",
-  "bio_text": "Sono uno sviluppatore mobile di Torino, Italia.\nAttualmente lavoro come Software Engineer a PatchAi, una società di Alira Health, e sono uno studente di ingegneria al Politecnico di Torino.",
+  "bio_text": "Sono uno sviluppatore di app mobile di Torino.\nAttualmente lavoro come Software Engineer a PatchAi, una società di Alira Health, e sono uno studente di ingegneria al Politecnico di Torino.",
   "go": "Vai",
   "brightness": "Luminosità"
 };

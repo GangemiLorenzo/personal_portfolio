@@ -104,6 +104,52 @@ class HomePage extends StatelessWidget {
                 content: LocaleKeys.tech_text.tr(),
                 child: const MySkills(),
               ),
+              Section(
+                color: Theme.of(context).myPalette.primary,
+                title: LocaleKeys.timeline.tr(),
+                child: Column(
+                  children: [
+                    IntrinsicHeight(
+                      child: Row(
+                        children: const [
+                          Expanded(
+                            flex: 1,
+                            child: Center(
+                              child: Text('2016'),
+                            ),
+                          ),
+                          Expanded(
+                              flex: 4,
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(vertical: 16.0),
+                                child: Text(
+                                    'Questo è un testo di prova.\nHo lavorato come sviluppatore Android in Java Nativo per MDPtech'),
+                              )),
+                        ],
+                      ),
+                    ),
+                    IntrinsicHeight(
+                      child: Row(
+                        children: const [
+                          Expanded(
+                            flex: 1,
+                            child: Center(
+                              child: Text('2016'),
+                            ),
+                          ),
+                          Expanded(
+                              flex: 4,
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(vertical: 16.0),
+                                child: Text(
+                                    'Questo è un testo di prova.\nHo lavorato come sviluppatore Android in Java Nativo per MDPtech'),
+                              )),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               const SizedBox(
                 height: 64,
               ),
