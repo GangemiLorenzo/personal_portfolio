@@ -117,7 +117,7 @@ class _StrokeGridPainter extends CustomPainter {
 
         var paint = Paint()
           ..color = strokeColor
-          ..strokeWidth = strokeWidth
+          ..strokeWidth = strokeWidth * (k * 2 + 1)
           ..strokeCap = StrokeCap.round;
 
         Offset startingPoint = Offset(
