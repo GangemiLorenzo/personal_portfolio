@@ -7,6 +7,8 @@ class SkillIndicator extends StatefulWidget {
     required this.progress,
     required this.icon,
     this.iconColor,
+    this.animationOffset = 20,
+    this.animationDuration = const Duration(milliseconds: 800),
     Key? key,
   }) : super(key: key);
 
@@ -15,6 +17,8 @@ class SkillIndicator extends StatefulWidget {
   final int progress;
   final IconData icon;
   final Color? iconColor;
+  final int animationOffset;
+  final Duration animationDuration;
 
   @override
   State<SkillIndicator> createState() => _SkillIndicatorState();
@@ -29,8 +33,13 @@ class _SkillIndicatorState extends State<SkillIndicator>
   @override
   void initState() {
     _animationController = AnimationController(
-        duration: const Duration(milliseconds: 800), vsync: this);
-    _animation = IntTween(begin: -10, end: 10).animate(
+      duration: widget.animationDuration,
+      vsync: this,
+    );
+    _animation = IntTween(
+            begin: -(widget.animationOffset / 2).round(),
+            end: (widget.animationOffset / 2).round())
+        .animate(
       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
     _progress = widget.progress * 10 + _animation.value as int;

@@ -3,6 +3,7 @@ import 'package:personal_portfolio/common/common.dart';
 import 'package:personal_portfolio/core/lang/lang.dart';
 import 'package:personal_portfolio/pages/home/view/widget/my_avatar.dart';
 import 'package:personal_portfolio/pages/home/view/widget/my_skills.dart';
+import 'package:personal_portfolio/pages/home/view/widget/my_timeline.dart';
 import 'package:personal_portfolio/pages/home/view/widget/section.dart';
 import 'package:personal_portfolio/theme/theme.dart';
 
@@ -107,61 +108,7 @@ class HomePage extends StatelessWidget {
               Section(
                 color: Theme.of(context).myPalette.primary,
                 title: LocaleKeys.timeline.tr(),
-                child: Column(
-                  children: [
-                    Row(
-                      children: const [
-                        Expanded(
-                          flex: 1,
-                          child: Center(
-                            child: Text('2016'),
-                          ),
-                        ),
-                        Expanded(
-                            flex: 4,
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(vertical: 16.0),
-                              child: Text(
-                                  'MDPtech\nManta, Italia\nSviluppo Android Nativo e Web'),
-                            )),
-                      ],
-                    ),
-                    Row(
-                      children: const [
-                        Expanded(
-                          flex: 1,
-                          child: Center(
-                            child: Text('2020'),
-                          ),
-                        ),
-                        Expanded(
-                            flex: 4,
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(vertical: 16.0),
-                              child: Text(
-                                  'StarTy\nRemote\nSviluppo Flutter e Firebase'),
-                            )),
-                      ],
-                    ),
-                    Row(
-                      children: const [
-                        Expanded(
-                          flex: 1,
-                          child: Center(
-                            child: Text('2021'),
-                          ),
-                        ),
-                        Expanded(
-                            flex: 4,
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(vertical: 16.0),
-                              child: Text(
-                                  'Patchai, an Alira Health company\nRemote\nSoftware Engineer, Flutter e Go'),
-                            )),
-                      ],
-                    ),
-                  ],
-                ),
+                child: const MyTimeline(),
               ),
               const SizedBox(
                 height: 64,

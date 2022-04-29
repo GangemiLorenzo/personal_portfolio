@@ -20,18 +20,18 @@ class MySkills extends StatelessWidget {
           iconColor: Color.fromARGB(255, 81, 192, 240),
         ),
         SkillIndicator(
-          color: Color.fromARGB(255, 63, 185, 132),
-          backgroundColor: Color.fromARGB(70, 63, 185, 132),
-          progress: 60,
-          icon: MyIcons.vuejs_original,
-          iconColor: Color.fromARGB(255, 63, 185, 132),
-        ),
-        SkillIndicator(
           color: Color.fromARGB(255, 0, 167, 209),
           backgroundColor: Color.fromARGB(70, 0, 167, 209),
-          progress: 50,
+          progress: 70,
           icon: MyIcons.go_original,
           iconColor: Color.fromARGB(255, 0, 167, 209),
+        ),
+        SkillIndicator(
+          color: Color.fromARGB(255, 63, 185, 132),
+          backgroundColor: Color.fromARGB(70, 63, 185, 132),
+          progress: 80,
+          icon: MyIcons.vuejs_original,
+          iconColor: Color.fromARGB(255, 63, 185, 132),
         ),
         SkillIndicator(
           color: Color.fromARGB(255, 255, 202, 44),
