@@ -30,6 +30,16 @@ class _SkillIndicatorState extends State<SkillIndicator>
   late Animation _animation;
   late int _progress;
 
+  int _randomDelay() {
+    final list = List.generate(500, (i) => i);
+    list.shuffle();
+    return list[0] + 500;
+  }
+
+  void _updateProgress() => setState(() {
+        _progress = widget.progress * 10 + _animation.value as int;
+      });
+
   @override
   void initState() {
     _animationController = AnimationController(
@@ -44,19 +54,20 @@ class _SkillIndicatorState extends State<SkillIndicator>
     );
     _progress = widget.progress * 10 + _animation.value as int;
 
-    List list = List.generate(500, (i) => i);
-    list.shuffle();
-    int delay = list[0] + 500;
+    int delay = _randomDelay();
 
     Future.delayed(Duration(milliseconds: delay), () {
       _animationController.repeat(reverse: true);
     });
-    _animation.addListener(() {
-      setState(() {
-        _progress = widget.progress * 10 + _animation.value as int;
-      });
-    });
+    _animation.addListener(_updateProgress);
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    _animation.removeListener(_updateProgress);
+    super.dispose();
   }
 
   @override
