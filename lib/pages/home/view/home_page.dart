@@ -103,7 +103,9 @@ class HomePage extends StatelessWidget {
                 color: Theme.of(context).myPalette.primary,
                 title: LocaleKeys.tech.tr(),
                 content: LocaleKeys.tech_text.tr(),
-                child: const MySkills(),
+                child: MySkills(
+                  animated: !isSmall(context),
+                ),
               ),
               Section(
                 color: Theme.of(context).myPalette.primary,

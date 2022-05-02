@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/common/common.dart';
 import 'package:personal_portfolio/theme/theme.dart';
 
 enum TimelineItemStyle { primary, secondary, tertiary }
@@ -25,7 +26,7 @@ class TimelineItem extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            flex: 2,
+            flex: isSmall(context) ? 5 : 4,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -39,11 +40,14 @@ class TimelineItem extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(16.0),
+                      padding: EdgeInsets.all(isSmall(context) ? 8.0 : 16.0),
                       child: Text(
                         year,
-                        style:
-                            Theme.of(context).myTypography.headline4.copyWith(
+                        style: isSmall(context)
+                            ? Theme.of(context).myTypography.headline5.copyWith(
+                                  color: yearColor(context),
+                                )
+                            : Theme.of(context).myTypography.headline4.copyWith(
                                   color: yearColor(context),
                                 ),
                       ),
@@ -57,7 +61,7 @@ class TimelineItem extends StatelessWidget {
             width: 8.0,
           ),
           Expanded(
-            flex: 6,
+            flex: 12,
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Column(

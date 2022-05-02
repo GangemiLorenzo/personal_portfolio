@@ -9,6 +9,7 @@ class SkillIndicator extends StatefulWidget {
     this.iconColor,
     this.animationOffset = 20,
     this.animationDuration = const Duration(milliseconds: 800),
+    this.animated = true,
     Key? key,
   }) : super(key: key);
 
@@ -19,6 +20,7 @@ class SkillIndicator extends StatefulWidget {
   final Color? iconColor;
   final int animationOffset;
   final Duration animationDuration;
+  final bool animated;
 
   @override
   State<SkillIndicator> createState() => _SkillIndicatorState();
@@ -59,7 +61,10 @@ class _SkillIndicatorState extends State<SkillIndicator>
     Future.delayed(Duration(milliseconds: delay), () {
       _animationController.repeat(reverse: true);
     });
-    _animation.addListener(_updateProgress);
+
+    if (widget.animated) {
+      _animation.addListener(_updateProgress);
+    }
     super.initState();
   }
 

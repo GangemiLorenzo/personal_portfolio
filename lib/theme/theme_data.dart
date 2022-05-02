@@ -18,12 +18,14 @@ ThemeData getLightTheme({
     if (states.contains(MaterialState.selected)) {
       return IconThemeData(color: theme.myPalette.onSecondaryContainer);
     }
+    return null;
   }
 
   TextStyle? _getTextStyleState(Set<MaterialState> states) {
     if (states.contains(MaterialState.selected)) {
       return TextStyle(color: theme.myPalette.onSecondaryContainer);
     }
+    return null;
   }
 
   return theme.copyWith(
@@ -144,12 +146,14 @@ ThemeData getDarkTheme({
     if (states.contains(MaterialState.selected)) {
       return IconThemeData(color: theme.myPalette.onSecondaryContainer);
     }
+    return null;
   }
 
   TextStyle? _getTextStyleState(Set<MaterialState> states) {
     if (states.contains(MaterialState.selected)) {
       return TextStyle(color: theme.myPalette.onSecondaryContainer);
     }
+    return null;
   }
 
   return theme.copyWith(
