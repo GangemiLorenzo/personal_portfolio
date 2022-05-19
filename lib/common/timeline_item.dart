@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/common/common.dart';
+import 'package:personal_portfolio/core/lang/lang.dart';
 import 'package:personal_portfolio/theme/theme.dart';
 
 enum TimelineItemStyle { primary, secondary, tertiary }
@@ -7,14 +7,16 @@ enum TimelineItemStyle { primary, secondary, tertiary }
 class TimelineItem extends StatelessWidget {
   const TimelineItem({
     Key? key,
-    required this.year,
+    required this.from,
+    required this.to,
     required this.title,
     required this.subtitle,
     this.content,
     this.style = TimelineItemStyle.primary,
   }) : super(key: key);
 
-  final String year;
+  final String from;
+  final String to;
   final String title;
   final String subtitle;
   final String? content;
@@ -22,74 +24,50 @@ class TimelineItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicHeight(
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 24.0),
       child: Row(
         children: [
           Expanded(
-            flex: isSmall(context) ? 5 : 4,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(24.0),
-                  ),
-                  color: yearContainerColor(context),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(isSmall(context) ? 8.0 : 16.0),
-                      child: Text(
-                        year,
-                        style: isSmall(context)
-                            ? Theme.of(context).myTypography.headline5.copyWith(
-                                  color: yearColor(context),
-                                )
-                            : Theme.of(context).myTypography.headline4.copyWith(
-                                  color: yearColor(context),
-                                ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: Theme.of(context).myTypography.headline3.copyWith(
+                        color: titleColor(context),
                       ),
+                ),
+                const SizedBox(
+                  height: 4.0,
+                ),
+                if (content != null)
+                  Text(
+                    content!,
+                    style: Theme.of(context).myTypography.bodyText1,
+                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          subtitle,
+                          style: Theme.of(context).myTypography.bodyText2,
+                        ),
+                        const SizedBox(
+                          height: 8.0,
+                        ),
+                        Text(
+                          "${from.isNotEmpty ? '${LocaleKeys.timeline_from.tr()} $from ${LocaleKeys.timeline_to.tr()} ' : ''}$to",
+                          style: Theme.of(context).myTypography.overline,
+                        ),
+                      ],
                     ),
                   ],
                 ),
-              ),
-            ),
-          ),
-          const SizedBox(
-            width: 8.0,
-          ),
-          Expanded(
-            flex: 12,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: Theme.of(context).myTypography.headline3.copyWith(
-                          color: titleColor(context),
-                        ),
-                  ),
-                  const SizedBox(
-                    height: 4.0,
-                  ),
-                  Text(
-                    subtitle,
-                    style: Theme.of(context).myTypography.bodyText2,
-                  ),
-                  const SizedBox(
-                    height: 8.0,
-                  ),
-                  if (content != null)
-                    Text(
-                      content!,
-                      style: Theme.of(context).myTypography.bodyText1,
-                    ),
-                ],
-              ),
+              ],
             ),
           ),
         ],

@@ -109,7 +109,7 @@ class HomePage extends StatelessWidget {
               ),
               Section(
                 color: Theme.of(context).myPalette.primary,
-                title: LocaleKeys.timeline.tr(),
+                title: LocaleKeys.timeline_title.tr(),
                 child: const MyTimeline(),
               ),
               const SizedBox(
