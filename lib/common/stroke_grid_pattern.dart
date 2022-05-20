@@ -28,12 +28,47 @@ class StrokeGridPattern extends StatefulWidget {
   State<StrokeGridPattern> createState() => _StrokeGridPatternState();
 }
 
-class _StrokeGridPatternState extends State<StrokeGridPattern> {
-  late Offset position;
+class _StrokeGridPatternState extends State<StrokeGridPattern>
+    with TickerProviderStateMixin {
+  late Offset _position;
+  late Offset _pointer;
+  late AnimationController _controller;
+  late Animation _angleAnimation;
 
   @override
   void initState() {
-    position = Offset.zero;
+    _position = Offset.zero;
+    _pointer = Offset.zero;
+
+    _controller = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 10),
+    );
+
+    _angleAnimation = Tween(begin: 0.0, end: 360.0).animate(_controller);
+
+    _controller
+      ..addListener(() {
+        if (_pointer == Offset.zero) {
+          double angle = _angleAnimation.value;
+          double radius = 40.0;
+          double x = -200 + _controller.value * 1000;
+          double y = radius * cos(pi * 2 * angle * 5 / 360);
+          setState(
+            () => {_position = Offset(40, 40).translate(x, y + 80)},
+          );
+        }
+      })
+      ..addStatusListener((status) {
+        if (status == AnimationStatus.completed) {
+          _controller.repeat();
+        } else if (status == AnimationStatus.dismissed) {
+          _controller.forward();
+        }
+      });
+
+    _controller.forward();
+
     super.initState();
   }
 
@@ -44,20 +79,21 @@ class _StrokeGridPatternState extends State<StrokeGridPattern> {
         RenderBox box = context.findRenderObject() as RenderBox;
         setState(
           () => {
-            position = box.globalToLocal(event.position),
+            _pointer = box.globalToLocal(event.position),
             if (widget.paddingVertical != null ||
                 widget.paddingHorizontal != null)
-              position = position.translate(
+              _pointer = _pointer.translate(
                 -(widget.paddingHorizontal ?? 0.0),
                 -(widget.paddingVertical ?? 0.0),
-              )
+              ),
           },
         );
       },
       onExit: (event) {
         setState(
           () => {
-            position = Offset.zero,
+            _position = Offset.zero,
+            _pointer = Offset.zero,
           },
         );
       },
@@ -67,7 +103,7 @@ class _StrokeGridPatternState extends State<StrokeGridPattern> {
             vertical: widget.paddingVertical ?? 0.0),
         child: CustomPaint(
           painter: _StrokeGridPainter(
-            p: position,
+            p: _pointer.dx == 0 ? _position : _pointer,
             offset: widget.offset ?? 30,
             actionRange: widget.actionRange ?? 500,
             strokeColor: widget.strokeColor ?? Colors.black,
