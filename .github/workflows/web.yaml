@@ -13,5 +13,4 @@ jobs:
       - uses: subosito/flutter-action@v1
       - uses: bluefireteam/flutter-gh-pages@v8
         with:
-          baseHref: /
           webRenderer: canvaskit
