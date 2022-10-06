@@ -26,6 +26,8 @@ dev_dependencies:
   flutter_gen_runner: ^4.1.2
   flutter_launcher_icons: ^0.9.2
   ficcanaso: ^4.0.0
+  game_of_life: 
+    git: https://github.com/GangemiLorenzo/Game-Of-Life
 
 flutter:
   uses-material-design: true

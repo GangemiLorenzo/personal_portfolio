@@ -17,4 +17,12 @@ class MyIcons {
       IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData flutter_original =
       IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData twitter =
+      IconData(0xf099, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData github =
+      IconData(0xf09b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData linkedin_in =
+      IconData(0xf0e1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData stack_overflow =
+      IconData(0xf16c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

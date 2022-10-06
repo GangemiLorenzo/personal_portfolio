@@ -1,3 +1,5 @@
+import 'dart:html' as html;
+
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/common/common.dart';
 import 'package:personal_portfolio/core/lang/lang.dart';
@@ -67,6 +69,49 @@ class HomePage extends StatelessWidget {
                                 LocaleKeys.description.tr(),
                                 style: Theme.of(context).myTypography.subtitle1,
                               ),
+                              SizedBox(
+                                height: 16,
+                              ),
+                              Row(
+                                children: [
+                                  IconButton(
+                                    onPressed: () => html.window.open(
+                                      'https://twitter.com/LorenzoGangemi_',
+                                      '_blank',
+                                    ),
+                                    icon: Icon(
+                                      MyIcons.twitter,
+                                    ),
+                                  ),
+                                  IconButton(
+                                    onPressed: () => html.window.open(
+                                      'https://github.com/GangemiLorenzo',
+                                      '_blank',
+                                    ),
+                                    icon: Icon(
+                                      MyIcons.github,
+                                    ),
+                                  ),
+                                  IconButton(
+                                    onPressed: () => html.window.open(
+                                      'https://stackoverflow.com/users/6769331/l-gangemi',
+                                      '_blank',
+                                    ),
+                                    icon: Icon(
+                                      MyIcons.stack_overflow,
+                                    ),
+                                  ),
+                                  IconButton(
+                                    onPressed: () => html.window.open(
+                                      'https://linkedin.com/in/lorenzo-gangemi',
+                                      '_blank',
+                                    ),
+                                    icon: Icon(
+                                      MyIcons.linkedin_in,
+                                    ),
+                                  ),
+                                ],
+                              )
                             ],
                           ),
                         ),
@@ -92,6 +137,50 @@ class HomePage extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: Theme.of(context).myTypography.subtitle1,
                         ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              onPressed: () => html.window.open(
+                                'https://twitter.com/LorenzoGangemi_',
+                                '_blank',
+                              ),
+                              icon: Icon(
+                                MyIcons.twitter,
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () => html.window.open(
+                                'https://github.com/GangemiLorenzo',
+                                '_blank',
+                              ),
+                              icon: Icon(
+                                MyIcons.github,
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () => html.window.open(
+                                'https://stackoverflow.com/users/6769331/l-gangemi',
+                                '_blank',
+                              ),
+                              icon: Icon(
+                                MyIcons.stack_overflow,
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () => html.window.open(
+                                'https://linkedin.com/in/lorenzo-gangemi',
+                                '_blank',
+                              ),
+                              icon: Icon(
+                                MyIcons.linkedin_in,
+                              ),
+                            ),
+                          ],
+                        )
                       ],
                     ),
               Section(
@@ -112,9 +201,30 @@ class HomePage extends StatelessWidget {
                 title: LocaleKeys.timeline_title.tr(),
                 child: const MyTimeline(),
               ),
+
+              // Section(
+              //   color: Theme.of(context).myPalette.primary,
+              //   title: 'Projects',
+              //   child: const MyProjects(),
+              // ),
+
               const SizedBox(
                 height: 64,
               ),
+
+              // Container(
+              //   height: 600,
+              //   width: 200,
+              //   child: GameOfLife(
+              //     milliseconds: 200,
+              //     cellSize: 20,
+              //     hideControls: true,
+              //     cellsColor: Theme.of(context).myPalette.primary,
+              //     backgroundColor: Theme.of(context).myPalette.background,
+              //     gridColor:
+              //         Theme.of(context).myPalette.onBackground.withAlpha(100),
+              //   ),
+              // ),
             ],
           ),
         ),

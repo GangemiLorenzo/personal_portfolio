@@ -32,7 +32,7 @@ class CodegenLoader extends AssetLoader{
   "timeline": {
     "year_patchai_to": "Current",
     "year_patchai_from": "Sep.2021",
-    "title_patchai": "Patchai, an Alira Health company",
+    "title_patchai": "AliraHealth",
     "subtitle_patchai": "Remote",
     "content_patchai": "Flutter and Go Developement",
     "year_starty_to": "Oct.2021",
@@ -75,7 +75,7 @@ static const Map<String,dynamic> it = {
   "timeline": {
     "year_patchai_to": "Attuale",
     "year_patchai_from": "Set.2021",
-    "title_patchai": "Patchai, una compagnia Alira Health",
+    "title_patchai": "AliraHealth",
     "subtitle_patchai": "Remoto",
     "content_patchai": "Sviluppo Flutter e Go",
     "year_starty_to": "Ott.2021",
