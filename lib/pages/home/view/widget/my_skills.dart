@@ -27,7 +27,7 @@ class MySkills extends StatelessWidget {
         SkillIndicator(
           color: const Color.fromARGB(255, 0, 167, 209),
           backgroundColor: const Color.fromARGB(70, 0, 167, 209),
-          progress: 70,
+          progress: 80,
           icon: context.watch<ThemeRepo>().myIcons.go_original,
           iconColor: const Color.fromARGB(255, 0, 167, 209),
           animated: animated,
@@ -35,17 +35,9 @@ class MySkills extends StatelessWidget {
         SkillIndicator(
           color: const Color.fromARGB(255, 63, 185, 132),
           backgroundColor: const Color.fromARGB(70, 63, 185, 132),
-          progress: 80,
+          progress: 70,
           icon: context.watch<ThemeRepo>().myIcons.vuejs_original,
           iconColor: const Color.fromARGB(255, 63, 185, 132),
-          animated: animated,
-        ),
-        SkillIndicator(
-          color: const Color.fromARGB(255, 255, 202, 44),
-          backgroundColor: const Color.fromARGB(70, 255, 202, 44),
-          progress: 80,
-          icon: context.watch<ThemeRepo>().myIcons.firebase_plain,
-          iconColor: const Color.fromARGB(255, 255, 202, 44),
           animated: animated,
         ),
       ],

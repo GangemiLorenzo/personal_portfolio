@@ -20,6 +20,13 @@ class MyTimeline extends StatelessWidget {
           style: TimelineItemStyle.primary,
         ),
         TimelineItem(
+          from: LocaleKeys.timeline_year_master_from.tr(),
+          to: LocaleKeys.timeline_year_master_to.tr(),
+          title: LocaleKeys.timeline_title_master.tr(),
+          subtitle: LocaleKeys.timeline_subtitle_master.tr(),
+          style: TimelineItemStyle.secondary,
+        ),
+        TimelineItem(
           from: LocaleKeys.timeline_year_starty_from.tr(),
           to: LocaleKeys.timeline_year_starty_to.tr(),
           title: LocaleKeys.timeline_title_starty.tr(),

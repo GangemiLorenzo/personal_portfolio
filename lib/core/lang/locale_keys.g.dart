@@ -15,6 +15,10 @@ abstract class  LocaleKeys {
   static const bio_text = 'bio_text';
   static const go = 'go';
   static const brightness = 'brightness';
+  static const timeline_year_master_to = 'timeline.year_master_to';
+  static const timeline_year_master_from = 'timeline.year_master_from';
+  static const timeline_title_master = 'timeline.title_master';
+  static const timeline_subtitle_master = 'timeline.subtitle_master';
   static const timeline_year_patchai_to = 'timeline.year_patchai_to';
   static const timeline_year_patchai_from = 'timeline.year_patchai_from';
   static const timeline_title_patchai = 'timeline.title_patchai';
