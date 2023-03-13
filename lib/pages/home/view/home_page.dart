@@ -8,6 +8,7 @@ import 'package:personal_portfolio/pages/home/view/widget/my_skills.dart';
 import 'package:personal_portfolio/pages/home/view/widget/my_timeline.dart';
 import 'package:personal_portfolio/pages/home/view/widget/section.dart';
 import 'package:personal_portfolio/theme/theme.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -41,7 +42,8 @@ class HomePage extends StatelessWidget {
                               paddingVertical: 64,
                               actionRange: 200,
                               strokeWidth: 1,
-                              strokeColor: Theme.of(context).myPalette.primary,
+                              strokeColor:
+                                  Theme.of(context).colorScheme.primary,
                               strokeLength: 12.0,
                             ),
                           ),
@@ -63,11 +65,12 @@ class HomePage extends StatelessWidget {
                             children: [
                               Text(
                                 LocaleKeys.hey.tr(),
-                                style: Theme.of(context).myTypography.headline2,
+                                style:
+                                    Theme.of(context).textTheme.displayMedium,
                               ),
                               Text(
                                 LocaleKeys.description.tr(),
-                                style: Theme.of(context).myTypography.subtitle1,
+                                style: Theme.of(context).textTheme.titleMedium,
                               ),
                               SizedBox(
                                 height: 16,
@@ -80,7 +83,10 @@ class HomePage extends StatelessWidget {
                                       '_blank',
                                     ),
                                     icon: Icon(
-                                      MyIcons.twitter,
+                                      context
+                                          .watch<ThemeRepo>()
+                                          .myIcons
+                                          .twitter,
                                     ),
                                   ),
                                   IconButton(
@@ -89,7 +95,7 @@ class HomePage extends StatelessWidget {
                                       '_blank',
                                     ),
                                     icon: Icon(
-                                      MyIcons.github,
+                                      context.watch<ThemeRepo>().myIcons.github,
                                     ),
                                   ),
                                   IconButton(
@@ -98,7 +104,10 @@ class HomePage extends StatelessWidget {
                                       '_blank',
                                     ),
                                     icon: Icon(
-                                      MyIcons.stack_overflow,
+                                      context
+                                          .watch<ThemeRepo>()
+                                          .myIcons
+                                          .stack_overflow,
                                     ),
                                   ),
                                   IconButton(
@@ -107,7 +116,10 @@ class HomePage extends StatelessWidget {
                                       '_blank',
                                     ),
                                     icon: Icon(
-                                      MyIcons.linkedin_in,
+                                      context
+                                          .watch<ThemeRepo>()
+                                          .myIcons
+                                          .linkedin_in,
                                     ),
                                   ),
                                 ],
@@ -130,12 +142,12 @@ class HomePage extends StatelessWidget {
                         ),
                         Text(
                           LocaleKeys.hey.tr(),
-                          style: Theme.of(context).myTypography.headline2,
+                          style: Theme.of(context).textTheme.displayMedium,
                         ),
                         Text(
                           LocaleKeys.description.tr(),
                           textAlign: TextAlign.center,
-                          style: Theme.of(context).myTypography.subtitle1,
+                          style: Theme.of(context).textTheme.titleMedium,
                         ),
                         SizedBox(
                           height: 16,
@@ -149,7 +161,7 @@ class HomePage extends StatelessWidget {
                                 '_blank',
                               ),
                               icon: Icon(
-                                MyIcons.twitter,
+                                context.watch<ThemeRepo>().myIcons.twitter,
                               ),
                             ),
                             IconButton(
@@ -158,7 +170,7 @@ class HomePage extends StatelessWidget {
                                 '_blank',
                               ),
                               icon: Icon(
-                                MyIcons.github,
+                                context.watch<ThemeRepo>().myIcons.github,
                               ),
                             ),
                             IconButton(
@@ -167,7 +179,10 @@ class HomePage extends StatelessWidget {
                                 '_blank',
                               ),
                               icon: Icon(
-                                MyIcons.stack_overflow,
+                                context
+                                    .watch<ThemeRepo>()
+                                    .myIcons
+                                    .stack_overflow,
                               ),
                             ),
                             IconButton(
@@ -176,7 +191,7 @@ class HomePage extends StatelessWidget {
                                 '_blank',
                               ),
                               icon: Icon(
-                                MyIcons.linkedin_in,
+                                context.watch<ThemeRepo>().myIcons.linkedin_in,
                               ),
                             ),
                           ],
@@ -184,12 +199,12 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
               Section(
-                color: Theme.of(context).myPalette.primary,
+                color: Theme.of(context).colorScheme.primary,
                 title: LocaleKeys.bio.tr(),
                 content: LocaleKeys.bio_text.tr(),
               ),
               Section(
-                color: Theme.of(context).myPalette.primary,
+                color: Theme.of(context).colorScheme.primary,
                 title: LocaleKeys.tech.tr(),
                 content: LocaleKeys.tech_text.tr(),
                 child: MySkills(
@@ -197,13 +212,13 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Section(
-                color: Theme.of(context).myPalette.primary,
+                color: Theme.of(context).colorScheme.primary,
                 title: LocaleKeys.timeline_title.tr(),
                 child: const MyTimeline(),
               ),
 
               // Section(
-              //   color: Theme.of(context).myPalette.primary,
+              //   color: Theme.of(context).colorScheme.primary,
               //   title: 'Projects',
               //   child: const MyProjects(),
               // ),
@@ -219,10 +234,10 @@ class HomePage extends StatelessWidget {
               //     milliseconds: 200,
               //     cellSize: 20,
               //     hideControls: true,
-              //     cellsColor: Theme.of(context).myPalette.primary,
-              //     backgroundColor: Theme.of(context).myPalette.background,
+              //     cellsColor: Theme.of(context).colorScheme.primary,
+              //     backgroundColor: Theme.of(context).colorScheme.background,
               //     gridColor:
-              //         Theme.of(context).myPalette.onBackground.withAlpha(100),
+              //         Theme.of(context).colorScheme.onBackground.withAlpha(100),
               //   ),
               // ),
             ],

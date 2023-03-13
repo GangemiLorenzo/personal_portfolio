@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/common/utils.dart';
-import 'package:personal_portfolio/theme/theme_extension.dart';
 
 class Section extends StatelessWidget {
   const Section({
@@ -36,7 +35,7 @@ class Section extends StatelessWidget {
           ),
           Text(
             title,
-            style: Theme.of(context).myTypography.headline4.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   color: color,
                 ),
           ),
@@ -48,7 +47,7 @@ class Section extends StatelessWidget {
           if (content != null)
             Text(
               content!,
-              style: Theme.of(context).myTypography.bodyText1,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
           if (action != null || child != null)
             const SizedBox(
@@ -66,7 +65,7 @@ class Section extends StatelessWidget {
                         ),
                     label: Text(
                       actionText!,
-                      style: Theme.of(context).myTypography.button.copyWith(
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
                             color: color,
                           ),
                     ),

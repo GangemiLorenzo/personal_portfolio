@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/common/common.dart';
 import 'package:personal_portfolio/theme/theme.dart';
+import 'package:provider/provider.dart';
 
 class MySkills extends StatelessWidget {
   const MySkills({
@@ -19,7 +20,7 @@ class MySkills extends StatelessWidget {
           color: const Color.fromARGB(255, 81, 192, 240),
           backgroundColor: const Color.fromARGB(70, 81, 192, 240),
           progress: 90,
-          icon: MyIcons.flutter_original,
+          icon: context.watch<ThemeRepo>().myIcons.flutter_original,
           iconColor: const Color.fromARGB(255, 81, 192, 240),
           animated: animated,
         ),
@@ -27,7 +28,7 @@ class MySkills extends StatelessWidget {
           color: const Color.fromARGB(255, 0, 167, 209),
           backgroundColor: const Color.fromARGB(70, 0, 167, 209),
           progress: 70,
-          icon: MyIcons.go_original,
+          icon: context.watch<ThemeRepo>().myIcons.go_original,
           iconColor: const Color.fromARGB(255, 0, 167, 209),
           animated: animated,
         ),
@@ -35,7 +36,7 @@ class MySkills extends StatelessWidget {
           color: const Color.fromARGB(255, 63, 185, 132),
           backgroundColor: const Color.fromARGB(70, 63, 185, 132),
           progress: 80,
-          icon: MyIcons.vuejs_original,
+          icon: context.watch<ThemeRepo>().myIcons.vuejs_original,
           iconColor: const Color.fromARGB(255, 63, 185, 132),
           animated: animated,
         ),
@@ -43,7 +44,7 @@ class MySkills extends StatelessWidget {
           color: const Color.fromARGB(255, 255, 202, 44),
           backgroundColor: const Color.fromARGB(70, 255, 202, 44),
           progress: 80,
-          icon: MyIcons.firebase_plain,
+          icon: context.watch<ThemeRepo>().myIcons.firebase_plain,
           iconColor: const Color.fromARGB(255, 255, 202, 44),
           animated: animated,
         ),

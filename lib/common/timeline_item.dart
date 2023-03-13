@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/core/lang/lang.dart';
-import 'package:personal_portfolio/theme/theme.dart';
 
 enum TimelineItemStyle { primary, secondary, tertiary }
 
@@ -34,7 +33,7 @@ class TimelineItem extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: Theme.of(context).myTypography.headline3.copyWith(
+                  style: Theme.of(context).textTheme.displaySmall?.copyWith(
                         color: titleColor(context),
                       ),
                 ),
@@ -44,7 +43,7 @@ class TimelineItem extends StatelessWidget {
                 if (content != null)
                   Text(
                     content!,
-                    style: Theme.of(context).myTypography.bodyText1,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -54,14 +53,14 @@ class TimelineItem extends StatelessWidget {
                       children: [
                         Text(
                           subtitle,
-                          style: Theme.of(context).myTypography.bodyText2,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                         const SizedBox(
                           height: 8.0,
                         ),
                         Text(
                           "${from.isNotEmpty ? '${LocaleKeys.timeline_from.tr()} $from ${LocaleKeys.timeline_to.tr()} ' : ''}$to",
-                          style: Theme.of(context).myTypography.overline,
+                          style: Theme.of(context).textTheme.labelSmall,
                         ),
                       ],
                     ),
@@ -78,33 +77,33 @@ class TimelineItem extends StatelessWidget {
   Color yearColor(BuildContext context) {
     switch (style) {
       case TimelineItemStyle.primary:
-        return Theme.of(context).myPalette.onPrimaryContainer;
+        return Theme.of(context).colorScheme.onPrimaryContainer;
       case TimelineItemStyle.secondary:
-        return Theme.of(context).myPalette.onSecondaryContainer;
+        return Theme.of(context).colorScheme.onSecondaryContainer;
       case TimelineItemStyle.tertiary:
-        return Theme.of(context).myPalette.onTertiaryContainer;
+        return Theme.of(context).colorScheme.onTertiaryContainer;
     }
   }
 
   Color yearContainerColor(BuildContext context) {
     switch (style) {
       case TimelineItemStyle.primary:
-        return Theme.of(context).myPalette.primaryContainer;
+        return Theme.of(context).colorScheme.primaryContainer;
       case TimelineItemStyle.secondary:
-        return Theme.of(context).myPalette.secondaryContainer;
+        return Theme.of(context).colorScheme.secondaryContainer;
       case TimelineItemStyle.tertiary:
-        return Theme.of(context).myPalette.tertiaryContainer;
+        return Theme.of(context).colorScheme.tertiaryContainer;
     }
   }
 
   Color titleColor(BuildContext context) {
     switch (style) {
       case TimelineItemStyle.primary:
-        return Theme.of(context).myPalette.primary;
+        return Theme.of(context).colorScheme.primary;
       case TimelineItemStyle.secondary:
-        return Theme.of(context).myPalette.secondary;
+        return Theme.of(context).colorScheme.secondary;
       case TimelineItemStyle.tertiary:
-        return Theme.of(context).myPalette.tertiary;
+        return Theme.of(context).colorScheme.tertiary;
     }
   }
 }

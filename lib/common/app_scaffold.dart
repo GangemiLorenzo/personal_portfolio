@@ -144,7 +144,7 @@ class NavigationSideBar extends StatelessWidget {
             height: 32,
             width: 64,
             decoration: BoxDecoration(
-                color: Theme.of(context).myPalette.secondaryContainer,
+                color: Theme.of(context).colorScheme.secondaryContainer,
                 borderRadius: const BorderRadius.all(Radius.circular(16.0))),
             child: const Icon(
               Icons.person,
@@ -162,7 +162,7 @@ class NavigationSideBar extends StatelessWidget {
             height: 32,
             width: 64,
             decoration: BoxDecoration(
-                color: Theme.of(context).myPalette.secondaryContainer,
+                color: Theme.of(context).colorScheme.secondaryContainer,
                 borderRadius: const BorderRadius.all(Radius.circular(16.0))),
             child: Icon(
               context.read<ThemeRepo>().themeMode == ThemeMode.dark

@@ -10,22 +10,22 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  easy_localization: ^3.0.0
+  easy_localization: ^3.0.1
   flutter_devicon: ^1.0.1
-  layout: ^1.0.2
-  provider: ^6.0.1
-  routemaster: ^1.0.0
-  google_fonts: ^2.1.0
-  material_color_utilities: ^0.1.2
-  shared_preferences: ^2.0.12
+  layout: ^1.0.3
+  provider: ^6.0.5
+  routemaster: ^1.0.1
+  google_fonts: ^4.0.3
+  material_color_utilities: ^0.2.0
+  shared_preferences: ^2.0.18
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: ^2.1.5
-  flutter_gen_runner: ^4.1.2
-  flutter_launcher_icons: ^0.9.2
-  ficcanaso: ^4.0.0
+  build_runner: ^2.3.3
+  flutter_gen_runner: ^5.2.0
+  flutter_launcher_icons: ^0.12.0
+  ficcanaso: ^5.0.0+1
   game_of_life: 
     git: https://github.com/GangemiLorenzo/Game-Of-Life
 

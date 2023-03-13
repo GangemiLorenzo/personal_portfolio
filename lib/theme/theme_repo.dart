@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-
-import 'theme_data.dart';
+import 'package:personal_portfolio/theme/theme.dart';
 
 class ThemeRepo extends ChangeNotifier {
   var _primaryKeyColor = const Color.fromARGB(255, 0, 196, 255);
 
+  MyIcons? _myIcons;
   Color get primaryKeyColor => _primaryKeyColor;
 
   set primaryColor(color) {
@@ -26,15 +26,14 @@ class ThemeRepo extends ChangeNotifier {
     notifyListeners();
   }
 
-  ThemeData get lightTheme {
-    return getLightTheme(
-      primaryKey: _primaryKeyColor,
-    );
-  }
+  ThemeData get lightTheme =>
+      ThemeData(useMaterial3: true, colorScheme: lightColorScheme);
 
-  ThemeData get darkTheme {
-    return getDarkTheme(
-      primaryKey: _primaryKeyColor,
-    );
+  ThemeData get darkTheme =>
+      ThemeData(useMaterial3: true, colorScheme: darkColorScheme);
+
+  MyIcons get myIcons {
+    _myIcons = _myIcons ?? MyIcons();
+    return _myIcons!;
   }
 }

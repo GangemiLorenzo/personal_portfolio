@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:layout/layout.dart';
 import 'package:personal_portfolio/core/lang/lang.dart';
 import 'package:personal_portfolio/routes/routes.dart';
-import 'package:personal_portfolio/theme/theme_repo.dart';
+import 'package:personal_portfolio/theme/theme.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -85,8 +85,8 @@ class MyApp extends StatelessWidget {
         routeInformationParser: RouteApp.routeInformationParser,
         restorationScopeId: 'root',
         themeMode: context.watch<ThemeRepo>().themeMode,
-        darkTheme: context.read<ThemeRepo>().darkTheme,
-        theme: context.read<ThemeRepo>().lightTheme,
+        theme: context.watch<ThemeRepo>().lightTheme,
+        darkTheme: context.watch<ThemeRepo>().darkTheme,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
