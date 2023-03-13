@@ -31,26 +31,23 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              !isSmall(context)
-                  ? Row(
-                      children: [
-                        Expanded(
-                          child: SizedBox(
-                            height: 360,
-                            child: StrokeGridPattern(
-                              paddingHorizontal: 16,
-                              paddingVertical: 64,
-                              actionRange: 200,
-                              strokeWidth: 1,
-                              strokeColor:
-                                  Theme.of(context).colorScheme.primary,
-                              strokeLength: 12.0,
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
-                  : Container(),
+              Row(
+                children: [
+                  Expanded(
+                    child: SizedBox(
+                      height: 360,
+                      child: StrokeGridPattern(
+                        paddingHorizontal: 16,
+                        paddingVertical: 64,
+                        actionRange: 200,
+                        strokeWidth: 1,
+                        strokeColor: Theme.of(context).colorScheme.primary,
+                        strokeLength: 12.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               const SizedBox(
                 height: 32,
               ),
@@ -207,9 +204,7 @@ class HomePage extends StatelessWidget {
                 color: Theme.of(context).colorScheme.primary,
                 title: LocaleKeys.tech.tr(),
                 content: LocaleKeys.tech_text.tr(),
-                child: MySkills(
-                  animated: !isSmall(context),
-                ),
+                child: MySkills(),
               ),
               Section(
                 color: Theme.of(context).colorScheme.primary,

@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 class MySkills extends StatelessWidget {
   const MySkills({
-    required this.animated,
+    this.animated = true,
     Key? key,
   }) : super(key: key);
 
