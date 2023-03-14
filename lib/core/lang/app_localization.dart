@@ -29,6 +29,7 @@ class CodegenLoader extends AssetLoader{
   "bio_text": "Software engineer skilled in mobile development.\nI'm currently looking for my next professional experience and I'm completing a Master's degree program at Politecnico di Torino.",
   "go": "Go",
   "brightness": "Brightness",
+  "resume": "Resume",
   "chip": {
     "flutter": "Flutter",
     "go": "Go",
@@ -97,6 +98,7 @@ static const Map<String,dynamic> it = {
   "bio_text": "Software engineer specializzato in app mobile.\nAttualmente sono alla ricerca della mia prossima esperienza lavorativa e sto terminando il Master presso il Politecnico di Torino.",
   "go": "Vai",
   "brightness": "Luminosità",
+  "resume": "Curriculum",
   "chip": {
     "flutter": "Flutter",
     "go": "Go",

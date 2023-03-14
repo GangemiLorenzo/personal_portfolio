@@ -1,3 +1,5 @@
+import 'dart:html' as html;
+
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/common/common.dart';
 import 'package:personal_portfolio/core/lang/lang.dart';
@@ -84,6 +86,12 @@ class _AppScaffoldState extends State<AppScaffold> {
       case 1:
         themeRepo.switchTheme();
         break;
+      case 2:
+        html.window.open(
+          'https://drive.google.com/file/d/1ce_EiDScFTePBWgqGVQm4lHEn-JTc15q/view?usp=sharing',
+          '_blank',
+        );
+        break;
     }
   }
 }
@@ -115,6 +123,12 @@ class NavigationBottomBar extends StatelessWidget {
           ),
           label: LocaleKeys.brightness.tr(),
         ),
+        NavigationDestination(
+          icon: const Icon(
+            Icons.file_download,
+          ),
+          label: LocaleKeys.resume.tr(),
+        ),
       ],
     );
   }
@@ -136,18 +150,14 @@ class NavigationSideBar extends StatelessWidget {
       selectedIndex: selectedIndex,
       onDestinationSelected: onIndexSelect,
       labelType: NavigationRailLabelType.all,
-      /*leading: Padding(
+      leading: Padding(
         padding: const EdgeInsets.only(top: 128.0),
         child: FloatingActionButton(
           elevation: 0,
-          onPressed: () => onIndexSelect.call(1),
-          child: Icon(
-            context.read<ThemeRepo>().themeMode == ThemeMode.dark
-                ? Icons.light_mode
-                : Icons.dark_mode,
-          ),
+          onPressed: () => onIndexSelect.call(2),
+          child: Icon(Icons.file_download),
         ),
-      ),*/
+      ),
       groupAlignment: 0.0,
       destinations: [
         NavigationRailDestination(

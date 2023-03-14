@@ -15,6 +15,7 @@ abstract class  LocaleKeys {
   static const bio_text = 'bio_text';
   static const go = 'go';
   static const brightness = 'brightness';
+  static const resume = 'resume';
   static const chip_flutter = 'chip.flutter';
   static const chip_go = 'chip.go';
   static const chip_gRPC = 'chip.gRPC';
