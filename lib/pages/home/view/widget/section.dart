@@ -47,7 +47,7 @@ class Section extends StatelessWidget {
           if (content != null)
             Text(
               content!,
-              style: Theme.of(context).textTheme.bodyLarge,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           if (action != null || child != null)
             const SizedBox(

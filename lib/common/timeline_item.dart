@@ -10,6 +10,7 @@ class TimelineItem extends StatelessWidget {
     required this.to,
     required this.title,
     required this.subtitle,
+    this.chips,
     this.content,
     this.style = TimelineItemStyle.primary,
   }) : super(key: key);
@@ -19,6 +20,7 @@ class TimelineItem extends StatelessWidget {
   final String title;
   final String subtitle;
   final String? content;
+  final List<String>? chips;
   final TimelineItemStyle style;
 
   @override
@@ -40,11 +42,37 @@ class TimelineItem extends StatelessWidget {
                 const SizedBox(
                   height: 4.0,
                 ),
-                if (content != null)
+                if (chips != null && chips!.isNotEmpty)
+                  Wrap(
+                    spacing: 8.0,
+                    runSpacing: 4.0,
+                    children: chips!
+                        .map((e) => Chip(
+                              label: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    e,
+                                    style:
+                                        Theme.of(context).textTheme.bodyLarge,
+                                  ),
+                                ],
+                              ),
+                            ))
+                        .toList(),
+                  ),
+                const SizedBox(
+                  height: 16.0,
+                ),
+                if (content != null) ...[
                   Text(
                     content!,
-                    style: Theme.of(context).textTheme.bodyLarge,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
+                  const SizedBox(
+                    height: 16.0,
+                  ),
+                ],
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -53,14 +81,14 @@ class TimelineItem extends StatelessWidget {
                       children: [
                         Text(
                           subtitle,
-                          style: Theme.of(context).textTheme.bodyMedium,
+                          style: Theme.of(context).textTheme.labelLarge,
                         ),
                         const SizedBox(
-                          height: 8.0,
+                          height: 4.0,
                         ),
                         Text(
                           "${from.isNotEmpty ? '${LocaleKeys.timeline_from.tr()} $from ${LocaleKeys.timeline_to.tr()} ' : ''}$to",
-                          style: Theme.of(context).textTheme.labelSmall,
+                          style: Theme.of(context).textTheme.labelMedium,
                         ),
                       ],
                     ),

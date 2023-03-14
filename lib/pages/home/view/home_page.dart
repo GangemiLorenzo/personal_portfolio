@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:personal_portfolio/common/common.dart';
 import 'package:personal_portfolio/core/lang/lang.dart';
 import 'package:personal_portfolio/pages/home/view/widget/my_avatar.dart';
+import 'package:personal_portfolio/pages/home/view/widget/my_education.dart';
+import 'package:personal_portfolio/pages/home/view/widget/my_employment.dart';
 import 'package:personal_portfolio/pages/home/view/widget/my_skills.dart';
-import 'package:personal_portfolio/pages/home/view/widget/my_timeline.dart';
 import 'package:personal_portfolio/pages/home/view/widget/section.dart';
 import 'package:personal_portfolio/theme/theme.dart';
 import 'package:provider/provider.dart';
@@ -22,6 +23,7 @@ class HomePage extends StatelessWidget {
         scrollbars: false,
       ),
       child: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Padding(
           padding: EdgeInsets.symmetric(
             vertical: 16.0,
@@ -31,23 +33,26 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: SizedBox(
-                      height: 360,
-                      child: StrokeGridPattern(
-                        paddingHorizontal: 16,
-                        paddingVertical: 64,
-                        actionRange: 200,
-                        strokeWidth: 1,
-                        strokeColor: Theme.of(context).colorScheme.primary,
-                        strokeLength: 12.0,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              !isSmall(context)
+                  ? Row(
+                      children: [
+                        Expanded(
+                          child: SizedBox(
+                            height: 360,
+                            child: StrokeGridPattern(
+                              paddingHorizontal: 16,
+                              paddingVertical: 64,
+                              actionRange: 200,
+                              strokeWidth: 1,
+                              strokeColor:
+                                  Theme.of(context).colorScheme.primary,
+                              strokeLength: 12.0,
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
+                  : Container(),
               const SizedBox(
                 height: 32,
               ),
@@ -139,6 +144,7 @@ class HomePage extends StatelessWidget {
                         ),
                         Text(
                           LocaleKeys.hey.tr(),
+                          textAlign: TextAlign.center,
                           style: Theme.of(context).textTheme.displayMedium,
                         ),
                         Text(
@@ -208,8 +214,13 @@ class HomePage extends StatelessWidget {
               ),
               Section(
                 color: Theme.of(context).colorScheme.primary,
-                title: LocaleKeys.timeline_title.tr(),
-                child: const MyTimeline(),
+                title: 'Employment',
+                child: const MyEmployment(),
+              ),
+              Section(
+                color: Theme.of(context).colorScheme.secondary,
+                title: 'Education',
+                child: const MyEducation(),
               ),
 
               // Section(

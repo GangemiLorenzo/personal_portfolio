@@ -136,6 +136,18 @@ class NavigationSideBar extends StatelessWidget {
       selectedIndex: selectedIndex,
       onDestinationSelected: onIndexSelect,
       labelType: NavigationRailLabelType.all,
+      /*leading: Padding(
+        padding: const EdgeInsets.only(top: 128.0),
+        child: FloatingActionButton(
+          elevation: 0,
+          onPressed: () => onIndexSelect.call(1),
+          child: Icon(
+            context.read<ThemeRepo>().themeMode == ThemeMode.dark
+                ? Icons.light_mode
+                : Icons.dark_mode,
+          ),
+        ),
+      ),*/
       groupAlignment: 0.0,
       destinations: [
         NavigationRailDestination(
