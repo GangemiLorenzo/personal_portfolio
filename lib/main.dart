@@ -82,6 +82,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Layout(
       child: MaterialApp.router(
+        title: LocaleKeys.title.tr(),
         routeInformationParser: RouteApp.routeInformationParser,
         restorationScopeId: 'root',
         themeMode: context.watch<ThemeRepo>().themeMode,
