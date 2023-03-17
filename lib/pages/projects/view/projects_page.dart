@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/common/common.dart';
+import 'package:personal_portfolio/core/lang/lang.dart';
 import 'package:personal_portfolio/pages/home/view/widget/my_cs_projects.dart';
 import 'package:personal_portfolio/pages/home/view/widget/my_os_projects.dart';
 import 'package:personal_portfolio/pages/home/view/widget/section.dart';
@@ -28,12 +29,12 @@ class ProjectsPage extends StatelessWidget {
             children: [
               Section(
                 color: Theme.of(context).colorScheme.primary,
-                title: 'Professional Projects',
+                title: LocaleKeys.professional_projects.tr(),
                 child: const MyCSProjects(),
               ),
               Section(
                 color: Theme.of(context).colorScheme.tertiary,
-                title: 'Open Source Projects',
+                title: LocaleKeys.os_projects.tr(),
                 child: const MyOSProjects(),
               ),
               const SizedBox(
