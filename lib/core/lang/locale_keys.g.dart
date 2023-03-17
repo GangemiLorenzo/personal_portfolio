@@ -4,6 +4,7 @@ abstract class  LocaleKeys {
   static const title = 'title';
   static const home = 'home';
   static const projects = 'projects';
+  static const career = 'career';
   static const timeline_title = 'timeline_title';
   static const not_found = 'not_found';
   static const tech = 'tech';
@@ -16,6 +17,10 @@ abstract class  LocaleKeys {
   static const go = 'go';
   static const brightness = 'brightness';
   static const resume = 'resume';
+  static const live = 'live';
+  static const source_code = 'source_code';
+  static const employment = 'employment';
+  static const education = 'education';
   static const chip_flutter = 'chip.flutter';
   static const chip_go = 'chip.go';
   static const chip_gRPC = 'chip.gRPC';
@@ -35,6 +40,9 @@ abstract class  LocaleKeys {
   static const chip_cplspls = 'chip.cplspls';
   static const chip_java = 'chip.java';
   static const chip_python = 'chip.python';
+  static const chip_solidity = 'chip.solidity';
+  static const chip_ganache = 'chip.ganache';
+  static const chip_truffle = 'chip.truffle';
   static const chip = 'chip';
   static const timeline_year_master_to = 'timeline.year_master_to';
   static const timeline_year_master_from = 'timeline.year_master_from';
@@ -66,5 +74,22 @@ abstract class  LocaleKeys {
   static const timeline_from = 'timeline.from';
   static const timeline_to = 'timeline.to';
   static const timeline = 'timeline';
+  static const project_myreco_title = 'project.myreco_title';
+  static const project_myreco_content = 'project.myreco_content';
+  static const project_starty_title = 'project.starty_title';
+  static const project_starty_content = 'project.starty_content';
+  static const project_game_of_life_title = 'project.game_of_life_title';
+  static const project_game_of_life_content = 'project.game_of_life_content';
+  static const project_flutter_starter_project_title = 'project.flutter_starter_project_title';
+  static const project_flutter_starter_project_content = 'project.flutter_starter_project_content';
+  static const project_todo_dapp_title = 'project.todo_dapp_title';
+  static const project_todo_dapp_content = 'project.todo_dapp_content';
+  static const project_goak_title = 'project.goak_title';
+  static const project_goak_content = 'project.goak_content';
+  static const project_telegram_scraper_title = 'project.telegram_scraper_title';
+  static const project_telegram_scraper_content = 'project.telegram_scraper_content';
+  static const project_instagram_bot_title = 'project.instagram_bot_title';
+  static const project_instagram_bot_content = 'project.instagram_bot_content';
+  static const project = 'project';
 
 }

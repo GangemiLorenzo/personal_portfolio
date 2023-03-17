@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/common/common.dart';
+import 'package:personal_portfolio/core/lang/lang.dart';
 import 'package:personal_portfolio/pages/home/view/widget/my_education.dart';
 import 'package:personal_portfolio/pages/home/view/widget/my_employment.dart';
 import 'package:personal_portfolio/pages/home/view/widget/section.dart';
@@ -28,12 +29,12 @@ class ExperiencesPage extends StatelessWidget {
             children: [
               Section(
                 color: Theme.of(context).colorScheme.primary,
-                title: 'Employment',
+                title: LocaleKeys.employment.tr(),
                 child: const MyEmployment(),
               ),
               Section(
                 color: Theme.of(context).colorScheme.secondary,
-                title: 'Education',
+                title: LocaleKeys.education.tr(),
                 child: const MyEducation(),
               ),
               const SizedBox(

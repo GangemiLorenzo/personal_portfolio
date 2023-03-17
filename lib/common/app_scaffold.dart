@@ -126,12 +126,12 @@ class NavigationBottomBar extends StatelessWidget {
         NavigationDestination(
           icon: const Icon(Icons.work_outline),
           selectedIcon: const Icon(Icons.work),
-          label: LocaleKeys.home.tr(),
+          label: LocaleKeys.career.tr(),
         ),
         NavigationDestination(
           icon: const Icon(Icons.computer_outlined),
           selectedIcon: const Icon(Icons.computer),
-          label: 'Projects',
+          label: LocaleKeys.projects.tr(),
         ),
         NavigationDestination(
           icon: const Icon(
@@ -202,7 +202,7 @@ class NavigationSideBar extends StatelessWidget {
               Icons.work,
             ),
           ),
-          label: Text('Career'),
+          label: Text(LocaleKeys.career.tr()),
         ),
         NavigationRailDestination(
           icon: const Icon(Icons.computer_outlined),
@@ -216,7 +216,7 @@ class NavigationSideBar extends StatelessWidget {
               Icons.computer,
             ),
           ),
-          label: Text('Projects'),
+          label: Text(LocaleKeys.projects.tr()),
         ),
         NavigationRailDestination(
           icon: Icon(

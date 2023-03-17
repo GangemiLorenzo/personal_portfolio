@@ -1,6 +1,7 @@
 import 'dart:html' as h;
 
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/core/lang/lang.dart';
 
 enum ProjectItemStyle { primary, secondary, tertiary }
 
@@ -26,7 +27,6 @@ class ProjectItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var html;
     return Padding(
       padding: const EdgeInsets.only(bottom: 24.0),
       child: Row(
@@ -74,7 +74,7 @@ class ProjectItem extends StatelessWidget {
                           liveLink!,
                           '_blank',
                         ),
-                        tooltip: 'Live',
+                        tooltip: LocaleKeys.live.tr(),
                         icon: Icon(
                           Icons.play_arrow_outlined,
                         ),
@@ -85,7 +85,7 @@ class ProjectItem extends StatelessWidget {
                           codeLink!,
                           '_blank',
                         ),
-                        tooltip: 'Source code',
+                        tooltip: LocaleKeys.source_code.tr(),
                         icon: Icon(
                           Icons.code_outlined,
                         ),

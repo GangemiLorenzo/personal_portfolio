@@ -13,9 +13,8 @@ class MyOSProjects extends StatelessWidget {
     return Column(
       children: [
         ProjectItem(
-          title: 'Game of life',
-          content:
-              'This project is an implementation of the famous Conway\'s game.',
+          title: LocaleKeys.project_game_of_life_title.tr(),
+          content: LocaleKeys.project_game_of_life_content.tr(),
           liveLink: 'https://gangemilorenzo.github.io/Game-Of-Life',
           codeLink: 'https://github.com/GangemiLorenzo/Game-Of-Life',
           style: ProjectItemStyle.tertiary,
@@ -34,9 +33,8 @@ class MyOSProjects extends StatelessWidget {
           ],
         ),
         ProjectItem(
-          title: 'PatchAii: Flutter Starter Project',
-          content:
-              'Starter template me and my collegues from AliraHealth have contributed before starting the company project.\nContains state management, auto generate feature’s template, routing, basic translations, basic notifications.',
+          title: LocaleKeys.project_flutter_starter_project_title.tr(),
+          content: LocaleKeys.project_flutter_starter_project_content.tr(),
           liveLink: 'https://patchaii.github.io/flutter_starter_project/',
           codeLink: 'https://github.com/PatchAii/flutter_starter_project',
           style: ProjectItemStyle.tertiary,
@@ -45,33 +43,20 @@ class MyOSProjects extends StatelessWidget {
           ],
         ),
         ProjectItem(
-          title: 'Todo DAPP',
-          content:
-              'This project is a basic mobile Todo App build with Flutter.\nThe backend consist in a Solidity contract running on the Ethereum Blockchain.',
+          title: LocaleKeys.project_todo_dapp_title.tr(),
+          content: LocaleKeys.project_todo_dapp_content.tr(),
           codeLink: 'https://github.com/GangemiLorenzo/Todo-DAPP',
           style: ProjectItemStyle.tertiary,
-          contentWidget: Container(
-            height: 300,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(
-                    'https://raw.githubusercontent.com/GangemiLorenzo/Todo-DAPP/main/readme_cover.png',
-                    scale: 0.5),
-              ),
-            ),
-          ),
           chips: [
             LocaleKeys.chip_flutter.tr(),
-            'Solidity',
-            'Ganache',
-            'Truffle'
+            LocaleKeys.chip_solidity.tr(),
+            LocaleKeys.chip_ganache.tr(),
+            LocaleKeys.chip_truffle.tr(),
           ],
         ),
         ProjectItem(
-          title: 'Goak',
-          content:
-              'Go module to build a decisional tree from a Json file and run a search through it.',
+          title: LocaleKeys.project_goak_title.tr(),
+          content: LocaleKeys.project_goak_content.tr(),
           codeLink: 'https://github.com/GangemiLorenzo/Goak',
           style: ProjectItemStyle.tertiary,
           chips: [
@@ -79,23 +64,21 @@ class MyOSProjects extends StatelessWidget {
           ],
         ),
         ProjectItem(
-          title: 'Telegram Scraper',
-          content:
-              'Python script to scrape telegram users from a group and move them to another.',
+          title: LocaleKeys.project_telegram_scraper_title.tr(),
+          content: LocaleKeys.project_telegram_scraper_content.tr(),
           codeLink: 'https://github.com/GangemiLorenzo/Telegram-scraper',
           style: ProjectItemStyle.tertiary,
           chips: [
-            'Python',
+            LocaleKeys.chip_python.tr(),
           ],
         ),
         ProjectItem(
-          title: 'Instagram ADB Bot',
-          content:
-              'Python script to automate likes inside Instagram android application.',
+          title: LocaleKeys.project_instagram_bot_title.tr(),
+          content: LocaleKeys.project_instagram_bot_content.tr(),
           codeLink: 'https://github.com/GangemiLorenzo/instagram-adb-bot',
           style: ProjectItemStyle.tertiary,
           chips: [
-            'Python',
+            LocaleKeys.chip_python.tr(),
           ],
         ),
       ],

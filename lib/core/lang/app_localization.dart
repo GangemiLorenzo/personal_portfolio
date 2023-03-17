@@ -18,6 +18,7 @@ class CodegenLoader extends AssetLoader{
   "title": "Lorenzo Gangemi",
   "home": "Home",
   "projects": "Projects",
+  "career": "Career",
   "timeline_title": "Timeline",
   "not_found": "Page not found",
   "tech": "Tech",
@@ -30,6 +31,10 @@ class CodegenLoader extends AssetLoader{
   "go": "Go",
   "brightness": "Brightness",
   "resume": "Resume",
+  "live": "Live",
+  "source_code": "Source code",
+  "employment": "Employment",
+  "education": "Education",
   "chip": {
     "flutter": "Flutter",
     "go": "Go",
@@ -49,7 +54,10 @@ class CodegenLoader extends AssetLoader{
     "oop": "Object oriented programming",
     "cplspls": "C++",
     "java": "java",
-    "python": "Python"
+    "python": "Python",
+    "solidity": "Solidity",
+    "ganache": "Ganache",
+    "truffle": "Truffle"
   },
   "timeline": {
     "year_master_to": "Current",
@@ -81,12 +89,31 @@ class CodegenLoader extends AssetLoader{
     "subtitle_vallauri": "Fossano, Italy",
     "from": "From",
     "to": "to"
+  },
+  "project": {
+    "myreco_title": "AliraHealth: MyReco",
+    "myreco_content": "This project aims to provide a personalized experience for Patients going through Clinical Studies.\nIt was developed during my experience in AliraHealth.\nIt was composed of a couple of Frontends in Flutter and a microservices architecture on the backend.",
+    "starty_title": "StarTy app",
+    "starty_content": "Crowdfunding platform dedicated to investments in startups and companies through cryptocurrencies and blockchain.\nI took care of building the frontend application using Flutter.\nWe used Firebase functions to interact with blockchain contracts.",
+    "game_of_life_title": "Game of life",
+    "game_of_life_content": "This project is an implementation of the famous Conway's game.",
+    "flutter_starter_project_title": "PatchAii: Flutter Starter Project",
+    "flutter_starter_project_content": "Starter template me and my collegues from AliraHealth have contributed before starting the company project.\nContains state management, auto generate feature’s template, routing, basic translations, basic notifications.",
+    "todo_dapp_title": "Todo DAPP",
+    "todo_dapp_content": "This project is a basic mobile Todo App build with Flutter.\nThe backend consist in a Solidity contract running on the Ethereum Blockchain.",
+    "goak_title": "Goak",
+    "goak_content": "Go module to build a decisional tree from a Json file and run a search through it.",
+    "telegram_scraper_title": "Telegram Scraper",
+    "telegram_scraper_content": "Python script to scrape telegram users from a group and move them to another.",
+    "instagram_bot_title": "Instagram ADB Bot",
+    "instagram_bot_content": "Python script to automate likes inside Instagram android application."
   }
 };
 static const Map<String,dynamic> it = {
   "title": "Lorenzo Gangemi",
   "home": "Home",
   "projects": "Progetti",
+  "career": "Carriera",
   "timeline_title": "Timeline",
   "not_found": "Pagina non trovata",
   "tech": "Tecnologie",
@@ -99,6 +126,10 @@ static const Map<String,dynamic> it = {
   "go": "Vai",
   "brightness": "Luminosità",
   "resume": "Curriculum",
+  "live": "Live",
+  "source_code": "Source code",
+  "employment": "Esperience professionali",
+  "education": "Educazione",
   "chip": {
     "flutter": "Flutter",
     "go": "Go",
@@ -118,7 +149,10 @@ static const Map<String,dynamic> it = {
     "oop": "Object oriented programming",
     "cplspls": "C++",
     "java": "java",
-    "python": "Python"
+    "python": "Python",
+    "solidity": "Solidity",
+    "ganache": "Ganache",
+    "truffle": "Truffle"
   },
   "timeline": {
     "year_master_to": "Attuale",
@@ -150,6 +184,24 @@ static const Map<String,dynamic> it = {
     "subtitle_vallauri": "Fossano, Italia",
     "from": "Da",
     "to": "a"
+  },
+  "project": {
+    "myreco_title": "AliraHealth: MyReco",
+    "myreco_content": "Questo progetto mira a fornire un'esperienza personalizzata per i pazienti che partecipano a studi clinici.\nÈ stato sviluppato durante la mia esperienza in AliraHealth.\nEra composto da un paio di Frontend in Flutter e un'architettura di microservizi sul backend.",
+    "starty_title": "App StarTy",
+    "starty_content": "Piattaforma di crowdfunding dedicata agli investimenti in startup e aziende tramite criptovalute e blockchain.\nMi sono occupato di costruire l'applicazione frontend utilizzando Flutter.\nAbbiamo utilizzato le funzioni di Firebase per interagire con i contratti blockchain.",
+    "game_of_life_title": "Game of life",
+    "game_of_life_content": "Questo progetto è un'implementazione del famoso gioco di Conway.",
+    "flutter_starter_project_title": "PatchAii: Flutter Starter Project",
+    "flutter_starter_project_content": "Template di avvio a cui io e i miei colleghi di AliraHealth abbiamo contribuito prima di iniziare il progetto aziendale.\nContiene la gestione dello stato, il modello di funzioni di generazione automatica, il routing, le traduzioni di base, le notifiche di base.",
+    "todo_dapp_title": "Todo DAPP",
+    "todo_dapp_content": "Questo progetto è un'applicazione mobile di base Todo costruita con Flutter.\nIl backend consiste in un contratto Solidity che gira sulla blockchain Ethereum.",
+    "goak_title": "Goak",
+    "goak_content": "Modulo Go per costruire un albero decisionale da un file Json ed eseguire una ricerca attraverso di esso.",
+    "telegram_scraper_title": "Telegram Scraper",
+    "telegram_scraper_content": "Script Python per estrarre gli utenti di telegram da un gruppo e spostarli in un altro.",
+    "instagram_bot_title": "Instagram ADB Bot",
+    "instagram_bot_content": "Script Python per automatizzare i like all'interno dell'applicazione Android di Instagram."
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "it": it};

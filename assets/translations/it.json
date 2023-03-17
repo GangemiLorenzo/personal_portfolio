@@ -2,6 +2,7 @@
   "title": "Lorenzo Gangemi",
   "home": "Home",
   "projects": "Progetti",
+  "career": "Carriera",
   "timeline_title": "Timeline",
   "not_found": "Pagina non trovata",
   "tech": "Tecnologie",
@@ -14,6 +15,10 @@
   "go": "Vai",
   "brightness": "Luminosità",
   "resume": "Curriculum",
+  "live": "Live",
+  "source_code": "Source code",
+  "employment": "Esperience professionali",
+  "education": "Educazione",
   "chip": {
     "flutter": "Flutter",
     "go": "Go",
@@ -33,7 +38,10 @@
     "oop": "Object oriented programming",
     "cplspls": "C++",
     "java": "java",
-    "python": "Python"
+    "python": "Python",
+    "solidity": "Solidity",
+    "ganache": "Ganache",
+    "truffle": "Truffle"
   },
   "timeline": {
     "year_master_to": "Attuale",
@@ -65,5 +73,23 @@
     "subtitle_vallauri": "Fossano, Italia",
     "from": "Da",
     "to": "a"
+  },
+  "project": {
+    "myreco_title": "AliraHealth: MyReco",
+    "myreco_content": "Questo progetto mira a fornire un'esperienza personalizzata per i pazienti che partecipano a studi clinici.\nÈ stato sviluppato durante la mia esperienza in AliraHealth.\nEra composto da un paio di Frontend in Flutter e un'architettura di microservizi sul backend.",
+    "starty_title": "App StarTy",
+    "starty_content": "Piattaforma di crowdfunding dedicata agli investimenti in startup e aziende tramite criptovalute e blockchain.\nMi sono occupato di costruire l'applicazione frontend utilizzando Flutter.\nAbbiamo utilizzato le funzioni di Firebase per interagire con i contratti blockchain.",
+    "game_of_life_title": "Game of life",
+    "game_of_life_content": "Questo progetto è un'implementazione del famoso gioco di Conway.",
+    "flutter_starter_project_title": "PatchAii: Flutter Starter Project",
+    "flutter_starter_project_content": "Template di avvio a cui io e i miei colleghi di AliraHealth abbiamo contribuito prima di iniziare il progetto aziendale.\nContiene la gestione dello stato, il modello di funzioni di generazione automatica, il routing, le traduzioni di base, le notifiche di base.",
+    "todo_dapp_title": "Todo DAPP",
+    "todo_dapp_content": "Questo progetto è un'applicazione mobile di base Todo costruita con Flutter.\nIl backend consiste in un contratto Solidity che gira sulla blockchain Ethereum.",
+    "goak_title": "Goak",
+    "goak_content": "Modulo Go per costruire un albero decisionale da un file Json ed eseguire una ricerca attraverso di esso.",
+    "telegram_scraper_title": "Telegram Scraper",
+    "telegram_scraper_content": "Script Python per estrarre gli utenti di telegram da un gruppo e spostarli in un altro.",
+    "instagram_bot_title": "Instagram ADB Bot",
+    "instagram_bot_content": "Script Python per automatizzare i like all'interno dell'applicazione Android di Instagram."
   }
 }
