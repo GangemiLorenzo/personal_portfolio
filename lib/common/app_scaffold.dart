@@ -84,9 +84,15 @@ class _AppScaffoldState extends State<AppScaffold> {
         RouteApp.routemaster.push(HOME);
         break;
       case 1:
-        themeRepo.switchTheme();
+        RouteApp.routemaster.push(CAREER);
         break;
       case 2:
+        RouteApp.routemaster.push(PROJECTS);
+        break;
+      case 3:
+        themeRepo.switchTheme();
+        break;
+      case 4:
         html.window.open(
           'https://drive.google.com/file/d/1ce_EiDScFTePBWgqGVQm4lHEn-JTc15q/view?usp=sharing',
           '_blank',
@@ -116,6 +122,16 @@ class NavigationBottomBar extends StatelessWidget {
           icon: const Icon(Icons.person_outline),
           selectedIcon: const Icon(Icons.person),
           label: LocaleKeys.home.tr(),
+        ),
+        NavigationDestination(
+          icon: const Icon(Icons.work_outline),
+          selectedIcon: const Icon(Icons.work),
+          label: LocaleKeys.home.tr(),
+        ),
+        NavigationDestination(
+          icon: const Icon(Icons.computer_outlined),
+          selectedIcon: const Icon(Icons.computer),
+          label: 'Projects',
         ),
         NavigationDestination(
           icon: const Icon(
@@ -154,7 +170,7 @@ class NavigationSideBar extends StatelessWidget {
         padding: const EdgeInsets.only(top: 128.0),
         child: FloatingActionButton(
           elevation: 0,
-          onPressed: () => onIndexSelect.call(2),
+          onPressed: () => onIndexSelect.call(4),
           child: Icon(Icons.file_download),
         ),
       ),
@@ -173,6 +189,34 @@ class NavigationSideBar extends StatelessWidget {
             ),
           ),
           label: Text(LocaleKeys.home.tr()),
+        ),
+        NavigationRailDestination(
+          icon: const Icon(Icons.work_outline),
+          selectedIcon: Container(
+            height: 32,
+            width: 64,
+            decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondaryContainer,
+                borderRadius: const BorderRadius.all(Radius.circular(16.0))),
+            child: const Icon(
+              Icons.work,
+            ),
+          ),
+          label: Text('Career'),
+        ),
+        NavigationRailDestination(
+          icon: const Icon(Icons.computer_outlined),
+          selectedIcon: Container(
+            height: 32,
+            width: 64,
+            decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondaryContainer,
+                borderRadius: const BorderRadius.all(Radius.circular(16.0))),
+            child: const Icon(
+              Icons.computer,
+            ),
+          ),
+          label: Text('Projects'),
         ),
         NavigationRailDestination(
           icon: Icon(

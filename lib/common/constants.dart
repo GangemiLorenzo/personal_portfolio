@@ -2,4 +2,4 @@
 
 const HOME = '/home';
 const PROJECTS = '/projects';
-const TIMELINE = '/timeline';
+const CAREER = '/career';

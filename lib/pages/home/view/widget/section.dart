@@ -28,6 +28,7 @@ class Section extends StatelessWidget {
           ? const EdgeInsets.symmetric(horizontal: 8.0)
           : EdgeInsets.zero,
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(

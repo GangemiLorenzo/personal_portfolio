@@ -3,9 +3,24 @@
 ///  FlutterGen
 /// *****************************************************
 
-// ignore_for_file: directives_ordering
+// coverage:ignore-file
+// ignore_for_file: type=lint
+// ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
 import 'package:flutter/widgets.dart';
+
+class $AssetsFontsGen {
+  const $AssetsFontsGen();
+
+  /// File path: assets/fonts/MyIcons.ttf
+  String get myIcons => 'assets/fonts/MyIcons.ttf';
+
+  /// File path: assets/fonts/config.json
+  String get config => 'assets/fonts/config.json';
+
+  /// List of all assets
+  List<String> get values => [myIcons, config];
+}
 
 class $AssetsProfileGen {
   const $AssetsProfileGen();
@@ -13,6 +28,22 @@ class $AssetsProfileGen {
   /// File path: assets/profile/profile.jpeg
   AssetGenImage get profile =>
       const AssetGenImage('assets/profile/profile.jpeg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [profile];
+}
+
+class $AssetsProjectsGen {
+  const $AssetsProjectsGen();
+
+  /// File path: assets/projects/myreco.png
+  AssetGenImage get myreco => const AssetGenImage('assets/projects/myreco.png');
+
+  /// File path: assets/projects/starty.png
+  AssetGenImage get starty => const AssetGenImage('assets/projects/starty.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [myreco, starty];
 }
 
 class $AssetsTranslationsGen {
@@ -23,28 +54,37 @@ class $AssetsTranslationsGen {
 
   /// File path: assets/translations/it.json
   String get it => 'assets/translations/it.json';
+
+  /// List of all assets
+  List<String> get values => [en, it];
 }
 
 class Assets {
   Assets._();
 
+  static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsProfileGen profile = $AssetsProfileGen();
+  static const $AssetsProjectsGen projects = $AssetsProjectsGen();
   static const $AssetsTranslationsGen translations = $AssetsTranslationsGen();
 }
 
-class AssetGenImage extends AssetImage {
-  const AssetGenImage(String assetName) : super(assetName);
+class AssetGenImage {
+  const AssetGenImage(this._assetName);
+
+  final String _assetName;
 
   Image image({
     Key? key,
+    AssetBundle? bundle,
     ImageFrameBuilder? frameBuilder,
-    ImageLoadingBuilder? loadingBuilder,
     ImageErrorWidgetBuilder? errorBuilder,
     String? semanticLabel,
     bool excludeFromSemantics = false,
+    double? scale,
     double? width,
     double? height,
     Color? color,
+    Animation<double>? opacity,
     BlendMode? colorBlendMode,
     BoxFit? fit,
     AlignmentGeometry alignment = Alignment.center,
@@ -53,19 +93,24 @@ class AssetGenImage extends AssetImage {
     bool matchTextDirection = false,
     bool gaplessPlayback = false,
     bool isAntiAlias = false,
+    String? package,
     FilterQuality filterQuality = FilterQuality.low,
+    int? cacheWidth,
+    int? cacheHeight,
   }) {
-    return Image(
+    return Image.asset(
+      _assetName,
       key: key,
-      image: this,
+      bundle: bundle,
       frameBuilder: frameBuilder,
-      loadingBuilder: loadingBuilder,
       errorBuilder: errorBuilder,
       semanticLabel: semanticLabel,
       excludeFromSemantics: excludeFromSemantics,
+      scale: scale,
       width: width,
       height: height,
       color: color,
+      opacity: opacity,
       colorBlendMode: colorBlendMode,
       fit: fit,
       alignment: alignment,
@@ -74,9 +119,16 @@ class AssetGenImage extends AssetImage {
       matchTextDirection: matchTextDirection,
       gaplessPlayback: gaplessPlayback,
       isAntiAlias: isAntiAlias,
+      package: package,
       filterQuality: filterQuality,
+      cacheWidth: cacheWidth,
+      cacheHeight: cacheHeight,
     );
   }
 
-  String get path => assetName;
+  ImageProvider provider() => AssetImage(_assetName);
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
 }

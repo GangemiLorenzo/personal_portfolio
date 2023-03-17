@@ -35,6 +35,7 @@ flutter:
     - assets/translations/
     - assets/profile/
     - assets/fonts/
+    - assets/projects/
 
   fonts:
     - family: MyIcons

@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:personal_portfolio/common/common.dart';
 import 'package:personal_portfolio/core/lang/lang.dart';
+import 'package:personal_portfolio/pages/experiences/view/experiences_page.dart';
 import 'package:personal_portfolio/pages/pages.dart';
+import 'package:personal_portfolio/pages/projects/view/projects_page.dart';
 import 'package:routemaster/routemaster.dart';
 
 class RouteApp {
@@ -28,6 +30,14 @@ class RouteApp {
             name: LocaleKeys.home,
             child: HomePage(),
           ),
+      CAREER: (_) => const MaterialPage(
+            name: LocaleKeys.home,
+            child: ExperiencesPage(),
+          ),
+      PROJECTS: (_) => const MaterialPage(
+            name: LocaleKeys.home,
+            child: ProjectsPage(),
+          ),
     },
   );
 
@@ -41,6 +51,8 @@ class RouteApp {
 
   static const tabRoutes = [
     HOME,
+    CAREER,
+    PROJECTS,
   ];
 
   static void initRoutes() {

@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:personal_portfolio/common/common.dart';
 import 'package:personal_portfolio/core/lang/lang.dart';
 import 'package:personal_portfolio/pages/home/view/widget/my_avatar.dart';
-import 'package:personal_portfolio/pages/home/view/widget/my_education.dart';
-import 'package:personal_portfolio/pages/home/view/widget/my_employment.dart';
 import 'package:personal_portfolio/pages/home/view/widget/my_skills.dart';
 import 'package:personal_portfolio/pages/home/view/widget/section.dart';
 import 'package:personal_portfolio/theme/theme.dart';
@@ -211,16 +209,6 @@ class HomePage extends StatelessWidget {
                 title: LocaleKeys.tech.tr(),
                 content: LocaleKeys.tech_text.tr(),
                 child: MySkills(),
-              ),
-              Section(
-                color: Theme.of(context).colorScheme.primary,
-                title: 'Employment',
-                child: const MyEmployment(),
-              ),
-              Section(
-                color: Theme.of(context).colorScheme.secondary,
-                title: 'Education',
-                child: const MyEducation(),
               ),
 
               // Section(
