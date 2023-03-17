@@ -35,6 +35,8 @@ class CodegenLoader extends AssetLoader{
   "source_code": "Source code",
   "employment": "Employment",
   "education": "Education",
+  "professional_projects": "Professional Projects",
+  "os_projects": "Open Source Projects",
   "chip": {
     "flutter": "Flutter",
     "go": "Go",
@@ -130,6 +132,8 @@ static const Map<String,dynamic> it = {
   "source_code": "Source code",
   "employment": "Esperience professionali",
   "education": "Educazione",
+  "professional_projects": "Progetti Professionali",
+  "os_projects": "Progetti Open Source",
   "chip": {
     "flutter": "Flutter",
     "go": "Go",

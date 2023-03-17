@@ -19,6 +19,8 @@
   "source_code": "Source code",
   "employment": "Employment",
   "education": "Education",
+  "professional_projects": "Professional Projects",
+  "os_projects": "Open Source Projects",
   "chip": {
     "flutter": "Flutter",
     "go": "Go",

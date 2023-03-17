@@ -21,6 +21,8 @@ abstract class  LocaleKeys {
   static const source_code = 'source_code';
   static const employment = 'employment';
   static const education = 'education';
+  static const professional_projects = 'professional_projects';
+  static const os_projects = 'os_projects';
   static const chip_flutter = 'chip.flutter';
   static const chip_go = 'chip.go';
   static const chip_gRPC = 'chip.gRPC';

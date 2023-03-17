@@ -36,6 +36,12 @@ class _StrokeGridPatternState extends State<StrokeGridPattern>
   late Animation _angleAnimation;
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   void initState() {
     _position = Offset.zero;
     _pointer = Offset.zero;
