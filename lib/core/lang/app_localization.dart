@@ -62,6 +62,11 @@ class CodegenLoader extends AssetLoader{
     "truffle": "Truffle"
   },
   "timeline": {
+    "year_young_to": "Current",
+    "year_young_from": "Apr.2023",
+    "title_young": "Young Platform",
+    "subtitle_young": "Turin, Italy",
+    "content_young": "• Building the italian main cryptocurrencies Exchange.",
     "year_master_to": "Current",
     "year_master_from": "Sep.2021",
     "title_master": "Master's degree in Software engineering\nPolitecnico di Torino",
@@ -159,6 +164,11 @@ static const Map<String,dynamic> it = {
     "truffle": "Truffle"
   },
   "timeline": {
+    "year_young_to": "Attuale",
+    "year_young_from": "Apr.2023",
+    "title_young": "Young Platform",
+    "subtitle_young": "Torino, Italia",
+    "content_young": "• Costriuamo il principale Exchange di cryptovalute italiano.",
     "year_master_to": "Attuale",
     "year_master_from": "Sep.2021",
     "title_master": "Laurea magistrale in Software engineering\nPolitecnico di Torino",

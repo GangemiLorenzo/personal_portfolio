@@ -46,6 +46,11 @@
     "truffle": "Truffle"
   },
   "timeline": {
+    "year_young_to": "Current",
+    "year_young_from": "Apr.2023",
+    "title_young": "Young Platform",
+    "subtitle_young": "Turin, Italy",
+    "content_young": "• Building the italian main cryptocurrencies Exchange.",
     "year_master_to": "Current",
     "year_master_from": "Sep.2021",
     "title_master": "Master's degree in Software engineering\nPolitecnico di Torino",

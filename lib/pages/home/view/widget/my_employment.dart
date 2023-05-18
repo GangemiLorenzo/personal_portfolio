@@ -12,6 +12,17 @@ class MyEmployment extends StatelessWidget {
     return Column(
       children: [
         TimelineItem(
+          from: LocaleKeys.timeline_year_young_from.tr(),
+          to: LocaleKeys.timeline_year_young_to.tr(),
+          title: LocaleKeys.timeline_title_young.tr(),
+          subtitle: LocaleKeys.timeline_subtitle_young.tr(),
+          content: LocaleKeys.timeline_content_young.tr(),
+          style: TimelineItemStyle.primary,
+          chips: [
+            LocaleKeys.chip_flutter.tr(),
+          ],
+        ),
+        TimelineItem(
           from: LocaleKeys.timeline_year_patchai_from.tr(),
           to: LocaleKeys.timeline_year_patchai_to.tr(),
           title: LocaleKeys.timeline_title_patchai.tr(),

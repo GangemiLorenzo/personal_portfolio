@@ -46,6 +46,11 @@ abstract class  LocaleKeys {
   static const chip_ganache = 'chip.ganache';
   static const chip_truffle = 'chip.truffle';
   static const chip = 'chip';
+  static const timeline_year_young_to = 'timeline.year_young_to';
+  static const timeline_year_young_from = 'timeline.year_young_from';
+  static const timeline_title_young = 'timeline.title_young';
+  static const timeline_subtitle_young = 'timeline.subtitle_young';
+  static const timeline_content_young = 'timeline.content_young';
   static const timeline_year_master_to = 'timeline.year_master_to';
   static const timeline_year_master_from = 'timeline.year_master_from';
   static const timeline_title_master = 'timeline.title_master';
