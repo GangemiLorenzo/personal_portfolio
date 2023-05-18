@@ -7,20 +7,20 @@ const String _kFontFam = 'MyIcons';
 const String? _kFontPkg = null;
 
 class MyIcons {
-  IconData firebase_plain =
-      IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  IconData go_original =
-      IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  IconData vuejs_original =
-      IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  IconData flutter_original =
-      IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  IconData twitter =
-      IconData(0xf099, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  IconData github =
-      IconData(0xf09b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  IconData linkedin_in =
-      IconData(0xf0e1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  IconData stack_overflow =
-      IconData(0xf16c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  IconData get firebase_plain =>
+      const IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  IconData get go_original =>
+      const IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  IconData get vuejs_original =>
+      const IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  IconData get flutter_original =>
+      const IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  IconData get twitter =>
+      const IconData(0xf099, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  IconData get github =>
+      const IconData(0xf09b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  IconData get linkedin_in =>
+      const IconData(0xf0e1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  IconData get stack_overflow =>
+      const IconData(0xf16c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
