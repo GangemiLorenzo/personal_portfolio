@@ -10,7 +10,7 @@ class CodegenLoader extends AssetLoader{
   const CodegenLoader();
 
   @override
-  Future<Map<String, dynamic>> load(String fullPath, Locale locale ) {
+  Future<Map<String, dynamic>?> load(String path, Locale locale) {
     return Future.value(mapLocales[locale.toString()]);
   }
 
@@ -66,7 +66,7 @@ class CodegenLoader extends AssetLoader{
     "year_young_from": "Apr.2023",
     "title_young": "Young Platform",
     "subtitle_young": "Turin, Italy",
-    "content_young": "• Building the italian main cryptocurrencies Exchange.",
+    "content_young": "• Building the italian main cryptocurrencies Exchange.\n• Started working on a production-ready released project. This required adapting and engaging with already established flows, while improving the standards at the same time.\n• Worked on entry-point features like the authentication process and the onboarding.\n • With the team we took care of payment related features, contract registrations and direct-debt payment.",
     "year_master_to": "Current",
     "year_master_from": "Sep.2021",
     "title_master": "Master's degree in Software engineering\nPolitecnico di Torino",
@@ -168,7 +168,7 @@ static const Map<String,dynamic> it = {
     "year_young_from": "Apr.2023",
     "title_young": "Young Platform",
     "subtitle_young": "Torino, Italia",
-    "content_young": "• Costriuamo il principale Exchange di cryptovalute italiano.",
+    "content_young": "• Ho contribuito alla costruzione del principale Exchange di Cryptovalute Italiano.\n• Sono stato introdotto al lavoro su un progetto rilasciato in produzione. Questo ha richiesto di adattarsi e interagire con flussi già stabiliti, migliorando al contempo gli standard.\n• Ho lavorato su funzionalità di entry point come il processo di autenticazione e l'onboarding.\n • Con il team ci siamo occupati di funzionalità legate ai pagamenti, registrazioni di mandati e pagamento con SDD.",
     "year_master_to": "Attuale",
     "year_master_from": "Sep.2021",
     "title_master": "Laurea magistrale in Software engineering\nPolitecnico di Torino",

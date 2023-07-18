@@ -61,7 +61,7 @@ class _StrokeGridPatternState extends State<StrokeGridPattern>
           double x = -200 + _controller.value * 1000;
           double y = radius * cos(pi * 2 * angle * 5 / 360);
           setState(
-            () => {_position = Offset(40, 40).translate(x, y + 80)},
+            () => _position = Offset(40, 40).translate(x, y + 80),
           );
         }
       })
