@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/common/utils.dart';
+import 'package:personal_portfolio/common/animated_gradient_container.dart';
 
 class Section extends StatelessWidget {
   const Section({
@@ -24,65 +24,89 @@ class Section extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: isSmall(context)
-          ? const EdgeInsets.symmetric(horizontal: 8.0)
-          : EdgeInsets.zero,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(
-            height: 64,
+      padding: const EdgeInsets.only(top: 32.0),
+      child: AnimatedGradientContainer(
+        decoration: BoxDecoration(
+          color: Colors.transparent,
+          borderRadius: BorderRadius.all(
+            Radius.circular(32),
           ),
-          Text(
-            title,
-            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                  color: color,
-                ),
+        ),
+        gradientSources: [
+          GradientSource(
+            color: color,
+            radius: 200,
+            alignment: Alignment(-1, -1),
+            blurRadius: 100,
           ),
-          const Divider(),
-          if (content != null)
-            const SizedBox(
-              height: 8,
-            ),
-          if (content != null)
-            Text(
-              content!,
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-          if (action != null || child != null)
-            const SizedBox(
-              height: 32,
-            ),
-          if (action != null)
-            Row(
-              children: [
-                Expanded(
-                  child: TextButton.icon(
-                    style: Theme.of(context).textButtonTheme.style!.copyWith(
-                          backgroundColor: MaterialStateProperty.all<Color>(
-                            actionColor!,
-                          ),
-                        ),
-                    label: Text(
-                      actionText!,
-                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                            color: color,
-                          ),
-                    ),
-                    icon: Icon(
-                      Icons.chevron_right,
+          GradientSource(
+            color: Theme.of(context).colorScheme.inverseSurface,
+            radius: 200,
+            alignment: Alignment(1, 1),
+            blurRadius: 200,
+          ),
+        ],
+        child: Padding(
+          padding: const EdgeInsets.all(32),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                       color: color,
                     ),
-                    onPressed: () {
-                      action!();
-                    },
-                  ),
+              ),
+              const Divider(),
+              if (content != null)
+                const SizedBox(
+                  height: 8,
                 ),
-              ],
-            ),
-          child ?? Container(),
-        ],
+              if (content != null)
+                Text(
+                  content!,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              if (action != null || child != null)
+                const SizedBox(
+                  height: 32,
+                ),
+              if (action != null)
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextButton.icon(
+                        style: Theme.of(context)
+                            .textButtonTheme
+                            .style!
+                            .copyWith(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                actionColor!,
+                              ),
+                            ),
+                        label: Text(
+                          actionText!,
+                          style:
+                              Theme.of(context).textTheme.labelLarge?.copyWith(
+                                    color: color,
+                                  ),
+                        ),
+                        icon: Icon(
+                          Icons.chevron_right,
+                          color: color,
+                        ),
+                        onPressed: () {
+                          action!();
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              child ?? Container(),
+            ],
+          ),
+        ),
       ),
     );
   }
