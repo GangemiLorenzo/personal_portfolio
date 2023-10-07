@@ -1,5 +1,5 @@
+import 'package:aura_box/aura_box.dart';
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/common/animated_gradient_container.dart';
 
 class Section extends StatelessWidget {
   const Section({
@@ -25,21 +25,21 @@ class Section extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 32.0),
-      child: AnimatedGradientContainer(
+      child: AuraBox(
         decoration: BoxDecoration(
           color: Colors.transparent,
           borderRadius: BorderRadius.all(
             Radius.circular(32),
           ),
         ),
-        gradientSources: [
-          GradientSource(
+        spots: [
+          AuraSpot(
             color: color,
             radius: 200,
             alignment: Alignment(-1, -1),
             blurRadius: 100,
           ),
-          GradientSource(
+          AuraSpot(
             color: Theme.of(context).colorScheme.inverseSurface,
             radius: 200,
             alignment: Alignment(1, 1),

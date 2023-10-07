@@ -1,5 +1,5 @@
 name: personal_portfolio
-description: A new Flutter project.
+description: Hey! I'm Lorenzo and this is my personal website
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -8,6 +8,7 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
+  aura_box: ^1.0.1
   flutter:
     sdk: flutter
   easy_localization: ^3.0.1
