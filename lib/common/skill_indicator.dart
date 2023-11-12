@@ -56,10 +56,12 @@ class _SkillIndicatorState extends State<SkillIndicator>
     );
     _progress = widget.progress * 10 + _animation.value as int;
 
-    int delay = _randomDelay();
+    final delay = _randomDelay();
 
     Future.delayed(Duration(milliseconds: delay), () {
-      _animationController.repeat(reverse: true);
+      if (mounted) {
+        _animationController.repeat(reverse: true);
+      }
     });
 
     if (widget.animated) {

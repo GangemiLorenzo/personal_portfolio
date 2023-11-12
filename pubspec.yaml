@@ -1,6 +1,6 @@
 name: personal_portfolio
 description: Hey! I'm Lorenzo and this is my personal website
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -8,7 +8,6 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  aura_box: ^1.0.1
   flutter:
     sdk: flutter
   easy_localization: ^3.0.1
@@ -25,7 +24,7 @@ dev_dependencies:
   flutter_gen_runner: ^5.2.0
   flutter_launcher_icons: ^0.13.1
   ficcanaso: ^6.0.1+1
-  game_of_life: 
+  game_of_life:
     git: https://github.com/GangemiLorenzo/Game-Of-Life
 
 flutter:
@@ -39,7 +38,7 @@ flutter:
   fonts:
     - family: MyIcons
       fonts:
-      - asset: assets/fonts/MyIcons.ttf
+        - asset: assets/fonts/MyIcons.ttf
 
 flutter_gen:
   output: lib/gen/
