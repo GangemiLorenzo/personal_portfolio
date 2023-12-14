@@ -95,7 +95,7 @@ class ProjectItem extends StatelessWidget {
                     if (pubdevLink != null)
                       IconButton(
                         onPressed: () => h.window.open(
-                          codeLink!,
+                          pubdevLink!,
                           '_blank',
                         ),
                         tooltip: LocaleKeys.pub_dev.tr(),
