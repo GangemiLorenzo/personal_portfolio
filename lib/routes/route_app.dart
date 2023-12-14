@@ -26,16 +26,13 @@ class RouteApp {
             child: const AppScaffold(),
             paths: tabRoutes,
           ),
-      HOME: (_) => const MaterialPage(
-            name: LocaleKeys.home,
+      HOME: (_) => MaterialPage(
             child: HomePage(),
           ),
-      CAREER: (_) => const MaterialPage(
-            name: LocaleKeys.home,
+      CAREER: (_) => MaterialPage(
             child: ExperiencesPage(),
           ),
-      PROJECTS: (_) => const MaterialPage(
-            name: LocaleKeys.home,
+      PROJECTS: (_) => MaterialPage(
             child: ProjectsPage(),
           ),
     },

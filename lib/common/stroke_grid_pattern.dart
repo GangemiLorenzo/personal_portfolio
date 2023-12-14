@@ -12,6 +12,7 @@ class StrokeGridPattern extends StatefulWidget {
     this.strokeColor,
     this.paddingVertical,
     this.paddingHorizontal,
+    this.animated = false,
     Key? key,
   }) : super(key: key);
 
@@ -23,6 +24,7 @@ class StrokeGridPattern extends StatefulWidget {
   final Color? strokeColor;
   final double? paddingVertical;
   final double? paddingHorizontal;
+  final bool animated;
 
   @override
   State<StrokeGridPattern> createState() => _StrokeGridPatternState();
@@ -73,7 +75,9 @@ class _StrokeGridPatternState extends State<StrokeGridPattern>
         }
       });
 
-    _controller.forward();
+    if (widget.animated) {
+      _controller.forward();
+    }
 
     super.initState();
   }
