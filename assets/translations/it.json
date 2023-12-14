@@ -6,17 +6,18 @@
   "timeline_title": "Timeline",
   "not_found": "Pagina non trovata",
   "tech": "Tecnologie",
-  "tech_text": "La maggior parte della mia esperienza riguarda lo sviluppo mobile, ma sono sempre stato appassionato di qualsiasi cosa fosse innovativo.\nRecentemente trascorro la maggior parte del mio tempo programmando in Flutter e Golang, ma nel passato ho lavorato con Android nativo e Vue.js. 📱💻",
+  "tech_text": "La maggior parte della mia esperienza riguarda lo sviluppo mobile, ma sono sempre stato appassionato di qualsiasi cosa fosse innovativo.\nRecentemente trascorro la maggior parte del mio tempo programmando in Flutter e Golang, ma quando posso mi dedico a Solidity e sviluppo di smart contracts. 📱💻",
   "mobile_web_dev": "Sviluppatore Mobile e Web con sede in Italia!",
   "hey": "Ciao! Sono Lorenzo 👋",
   "description": "Ingegnere Software, Sviluppatore e appassionato di tecnologia.",
   "bio": "Bio",
-  "bio_text": "Software engineer specializzato in app mobile.\nAttualmente sono alla ricerca della mia prossima esperienza lavorativa e sto terminando il Master presso il Politecnico di Torino.",
+  "bio_text": "Software engineer specializzato in app mobile.\nAttualmente ricopro la posizione di Senior Mobile Engineer presso Young Platform e sto terminando il Master presso il Politecnico di Torino.",
   "go": "Vai",
   "brightness": "Luminosità",
   "resume": "Curriculum",
   "live": "Live",
   "source_code": "Source code",
+  "pub_dev": "Pub.dev",
   "employment": "Esperience professionali",
   "education": "Educazione",
   "professional_projects": "Progetti Professionali",
@@ -43,7 +44,10 @@
     "python": "Python",
     "solidity": "Solidity",
     "ganache": "Ganache",
-    "truffle": "Truffle"
+    "truffle": "Truffle",
+    "shaders": "Shaders",
+    "rest": "REST",
+    "performance": "Performance"
   },
   "timeline": {
     "year_young_to": "Attuale",
@@ -82,6 +86,8 @@
     "to": "a"
   },
   "project": {
+    "young_platform_exchange_title": "Young Platform",
+    "young_platform_exchange_content": "Exchange di criptovalute per l'acquisto e vendita di asset oltre che strumenti di investimento.\nLe principali sfide affrontate nel suo sviluppo includono il mantenimento di un ambiente di produzione costantemente aggiornato e privo di bug, la gestione di una vasta base di utenti, la garanzia di misure di sicurezza robuste e la gestione delle informazioni personali.",
     "myreco_title": "AliraHealth: MyReco",
     "myreco_content": "Questo progetto mira a fornire un'esperienza personalizzata per i pazienti che partecipano a studi clinici.\nÈ stato sviluppato durante la mia esperienza in AliraHealth.\nEra composto da un paio di Frontend in Flutter e un'architettura di microservizi sul backend.",
     "starty_title": "App StarTy",
@@ -97,6 +103,7 @@
     "telegram_scraper_title": "Telegram Scraper",
     "telegram_scraper_content": "Script Python per estrarre gli utenti di telegram da un gruppo e spostarli in un altro.",
     "instagram_bot_title": "Instagram ADB Bot",
-    "instagram_bot_content": "Script Python per automatizzare i like all'interno dell'applicazione Android di Instagram."
+    "aura_box_title": "Aura box",
+    "aura_box_content": "Flutter widget per combinare moteplici gradienti radiali e effetti di blur."
   }
 }

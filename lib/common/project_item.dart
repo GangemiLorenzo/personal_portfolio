@@ -11,6 +11,7 @@ class ProjectItem extends StatelessWidget {
     required this.title,
     this.codeLink,
     this.liveLink,
+    this.pubdevLink,
     this.chips,
     this.content,
     this.contentWidget,
@@ -20,6 +21,7 @@ class ProjectItem extends StatelessWidget {
   final String title;
   final String? codeLink;
   final String? liveLink;
+  final String? pubdevLink;
   final String? content;
   final Widget? contentWidget;
   final List<String>? chips;
@@ -88,6 +90,17 @@ class ProjectItem extends StatelessWidget {
                         tooltip: LocaleKeys.source_code.tr(),
                         icon: Icon(
                           Icons.code_outlined,
+                        ),
+                      ),
+                    if (pubdevLink != null)
+                      IconButton(
+                        onPressed: () => h.window.open(
+                          codeLink!,
+                          '_blank',
+                        ),
+                        tooltip: LocaleKeys.pub_dev.tr(),
+                        icon: Icon(
+                          Icons.public,
                         ),
                       ),
                   ],

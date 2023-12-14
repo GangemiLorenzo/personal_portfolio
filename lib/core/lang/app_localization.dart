@@ -22,17 +22,18 @@ class CodegenLoader extends AssetLoader{
   "timeline_title": "Timeline",
   "not_found": "Page not found",
   "tech": "Tech",
-  "tech_text": "Most of my skills are in mobile development, but I've always been passionate about what's innovative in the tech field.\nI currently spend most of my time programming in Flutter and Golang, but in the past I have worked with native Android Java and Vue.js. 📱💻",
+  "tech_text": "Most of my skills are in mobile development, but I've always been passionate about what's innovative in the tech field.\nI currently spend most of my time programming in Flutter and Golang, but I'm learning Solidity and smart contract's development whenever I can. 📱💻",
   "mobile_web_dev": "Mobile and Web developer based in Italy!",
   "hey": "Hey! I'm Lorenzo 👋",
   "description": "Software Engineer, Developer and Tech enthusiast.",
   "bio": "Bio",
-  "bio_text": "Software engineer skilled in mobile development.\nI'm currently looking for my next professional experience and I'm completing a Master's degree program at Politecnico di Torino.",
+  "bio_text": "Software engineer skilled in mobile development.\nI'm currently working as Senior Mobile Engineer at Young Platform and I'm completing a Master's degree program at Politecnico di Torino.",
   "go": "Go",
   "brightness": "Brightness",
   "resume": "Resume",
   "live": "Live",
   "source_code": "Source code",
+  "pub_dev": "Pub.dev",
   "employment": "Employment",
   "education": "Education",
   "professional_projects": "Professional Projects",
@@ -59,7 +60,10 @@ class CodegenLoader extends AssetLoader{
     "python": "Python",
     "solidity": "Solidity",
     "ganache": "Ganache",
-    "truffle": "Truffle"
+    "truffle": "Truffle",
+    "shaders": "Shaders",
+    "rest": "REST",
+    "performance": "Performance"
   },
   "timeline": {
     "year_young_to": "Current",
@@ -98,6 +102,8 @@ class CodegenLoader extends AssetLoader{
     "to": "to"
   },
   "project": {
+    "young_platform_exchange_title": "Young Platform",
+    "young_platform_exchange_content": "Cryptocurrency exchange app for buying and selling crypto assets and offering tools for investment.\nKey challenges addressed in its development include maintaining a constantly updated and bug-free production environment, managing a large user base, ensuring robust security measures, and handling personal information.",
     "myreco_title": "AliraHealth: MyReco",
     "myreco_content": "This project aims to provide a personalized experience for Patients going through Clinical Studies.\nIt was developed during my experience in AliraHealth.\nIt was composed of a couple of Frontends in Flutter and a microservices architecture on the backend.",
     "starty_title": "StarTy app",
@@ -113,7 +119,9 @@ class CodegenLoader extends AssetLoader{
     "telegram_scraper_title": "Telegram Scraper",
     "telegram_scraper_content": "Python script to scrape telegram users from a group and move them to another.",
     "instagram_bot_title": "Instagram ADB Bot",
-    "instagram_bot_content": "Python script to automate likes inside Instagram android application."
+    "instagram_bot_content": "Python script to automate likes inside Instagram android application.",
+    "aura_box_title": "Aura box",
+    "aura_box_content": "Flutter widget that combines multiple radial gradients and blur effect."
   }
 };
 static const Map<String,dynamic> it = {
@@ -124,17 +132,18 @@ static const Map<String,dynamic> it = {
   "timeline_title": "Timeline",
   "not_found": "Pagina non trovata",
   "tech": "Tecnologie",
-  "tech_text": "La maggior parte della mia esperienza riguarda lo sviluppo mobile, ma sono sempre stato appassionato di qualsiasi cosa fosse innovativo.\nRecentemente trascorro la maggior parte del mio tempo programmando in Flutter e Golang, ma nel passato ho lavorato con Android nativo e Vue.js. 📱💻",
+  "tech_text": "La maggior parte della mia esperienza riguarda lo sviluppo mobile, ma sono sempre stato appassionato di qualsiasi cosa fosse innovativo.\nRecentemente trascorro la maggior parte del mio tempo programmando in Flutter e Golang, ma quando posso mi dedico a Solidity e sviluppo di smart contracts. 📱💻",
   "mobile_web_dev": "Sviluppatore Mobile e Web con sede in Italia!",
   "hey": "Ciao! Sono Lorenzo 👋",
   "description": "Ingegnere Software, Sviluppatore e appassionato di tecnologia.",
   "bio": "Bio",
-  "bio_text": "Software engineer specializzato in app mobile.\nAttualmente sono alla ricerca della mia prossima esperienza lavorativa e sto terminando il Master presso il Politecnico di Torino.",
+  "bio_text": "Software engineer specializzato in app mobile.\nAttualmente ricopro la posizione di Senior Mobile Engineer presso Young Platform e sto terminando il Master presso il Politecnico di Torino.",
   "go": "Vai",
   "brightness": "Luminosità",
   "resume": "Curriculum",
   "live": "Live",
   "source_code": "Source code",
+  "pub_dev": "Pub.dev",
   "employment": "Esperience professionali",
   "education": "Educazione",
   "professional_projects": "Progetti Professionali",
@@ -161,7 +170,10 @@ static const Map<String,dynamic> it = {
     "python": "Python",
     "solidity": "Solidity",
     "ganache": "Ganache",
-    "truffle": "Truffle"
+    "truffle": "Truffle",
+    "shaders": "Shaders",
+    "rest": "REST",
+    "performance": "Performance"
   },
   "timeline": {
     "year_young_to": "Attuale",
@@ -200,6 +212,8 @@ static const Map<String,dynamic> it = {
     "to": "a"
   },
   "project": {
+    "young_platform_exchange_title": "Young Platform",
+    "young_platform_exchange_content": "Exchange di criptovalute per l'acquisto e vendita di asset oltre che strumenti di investimento.\nLe principali sfide affrontate nel suo sviluppo includono il mantenimento di un ambiente di produzione costantemente aggiornato e privo di bug, la gestione di una vasta base di utenti, la garanzia di misure di sicurezza robuste e la gestione delle informazioni personali.",
     "myreco_title": "AliraHealth: MyReco",
     "myreco_content": "Questo progetto mira a fornire un'esperienza personalizzata per i pazienti che partecipano a studi clinici.\nÈ stato sviluppato durante la mia esperienza in AliraHealth.\nEra composto da un paio di Frontend in Flutter e un'architettura di microservizi sul backend.",
     "starty_title": "App StarTy",
@@ -215,7 +229,8 @@ static const Map<String,dynamic> it = {
     "telegram_scraper_title": "Telegram Scraper",
     "telegram_scraper_content": "Script Python per estrarre gli utenti di telegram da un gruppo e spostarli in un altro.",
     "instagram_bot_title": "Instagram ADB Bot",
-    "instagram_bot_content": "Script Python per automatizzare i like all'interno dell'applicazione Android di Instagram."
+    "aura_box_title": "Aura box",
+    "aura_box_content": "Flutter widget per combinare moteplici gradienti radiali e effetti di blur."
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "it": it};

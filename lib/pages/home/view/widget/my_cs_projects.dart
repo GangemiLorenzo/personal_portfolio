@@ -12,6 +12,16 @@ class MyCSProjects extends StatelessWidget {
     return Column(
       children: [
         ProjectItem(
+          title: LocaleKeys.project_young_platform_exchange_title.tr(),
+          content: LocaleKeys.project_young_platform_exchange_content.tr(),
+          style: ProjectItemStyle.primary,
+          chips: [
+            LocaleKeys.chip_flutter.tr(),
+            LocaleKeys.chip_security.tr(),
+            LocaleKeys.chip_performance.tr(),
+          ],
+        ),
+        ProjectItem(
           title: LocaleKeys.project_myreco_title.tr(),
           content: LocaleKeys.project_myreco_content.tr(),
           style: ProjectItemStyle.primary,

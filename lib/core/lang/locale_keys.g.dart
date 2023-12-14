@@ -19,6 +19,7 @@ abstract class  LocaleKeys {
   static const resume = 'resume';
   static const live = 'live';
   static const source_code = 'source_code';
+  static const pub_dev = 'pub_dev';
   static const employment = 'employment';
   static const education = 'education';
   static const professional_projects = 'professional_projects';
@@ -45,6 +46,9 @@ abstract class  LocaleKeys {
   static const chip_solidity = 'chip.solidity';
   static const chip_ganache = 'chip.ganache';
   static const chip_truffle = 'chip.truffle';
+  static const chip_shaders = 'chip.shaders';
+  static const chip_rest = 'chip.rest';
+  static const chip_performance = 'chip.performance';
   static const chip = 'chip';
   static const timeline_year_young_to = 'timeline.year_young_to';
   static const timeline_year_young_from = 'timeline.year_young_from';
@@ -81,6 +85,8 @@ abstract class  LocaleKeys {
   static const timeline_from = 'timeline.from';
   static const timeline_to = 'timeline.to';
   static const timeline = 'timeline';
+  static const project_young_platform_exchange_title = 'project.young_platform_exchange_title';
+  static const project_young_platform_exchange_content = 'project.young_platform_exchange_content';
   static const project_myreco_title = 'project.myreco_title';
   static const project_myreco_content = 'project.myreco_content';
   static const project_starty_title = 'project.starty_title';
@@ -97,6 +103,8 @@ abstract class  LocaleKeys {
   static const project_telegram_scraper_content = 'project.telegram_scraper_content';
   static const project_instagram_bot_title = 'project.instagram_bot_title';
   static const project_instagram_bot_content = 'project.instagram_bot_content';
+  static const project_aura_box_title = 'project.aura_box_title';
+  static const project_aura_box_content = 'project.aura_box_content';
   static const project = 'project';
 
 }

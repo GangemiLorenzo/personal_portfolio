@@ -13,21 +13,33 @@ class MyOSProjects extends StatelessWidget {
     return Column(
       children: [
         ProjectItem(
+          title: LocaleKeys.project_aura_box_title.tr(),
+          content: LocaleKeys.project_aura_box_content.tr(),
+          codeLink: 'https://github.com/GangemiLorenzo/aura_box',
+          pubdevLink: 'https://pub.dev/packages/aura_box',
+          style: ProjectItemStyle.tertiary,
+          chips: [
+            LocaleKeys.chip_flutter.tr(),
+            LocaleKeys.chip_shaders.tr(),
+          ],
+        ),
+        ProjectItem(
           title: LocaleKeys.project_game_of_life_title.tr(),
           content: LocaleKeys.project_game_of_life_content.tr(),
           liveLink: 'https://gangemilorenzo.github.io/Game-Of-Life',
           codeLink: 'https://github.com/GangemiLorenzo/Game-Of-Life',
           style: ProjectItemStyle.tertiary,
           contentWidget: Container(
-              height: 300,
-              child: GameOfLife(
-                cellSize: 20,
-                cellsColor: Theme.of(context).colorScheme.tertiary,
-                gridColor: Theme.of(context).colorScheme.tertiaryContainer,
-                hideControls: true,
-                backgroundColor: Colors.transparent,
-                milliseconds: 300,
-              )),
+            height: 300,
+            child: GameOfLife(
+              cellSize: 20,
+              cellsColor: Theme.of(context).colorScheme.tertiary,
+              gridColor: Theme.of(context).colorScheme.tertiaryContainer,
+              hideControls: true,
+              backgroundColor: Colors.transparent,
+              milliseconds: 300,
+            ),
+          ),
           chips: [
             LocaleKeys.chip_flutter.tr(),
           ],
