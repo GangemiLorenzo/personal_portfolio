@@ -18,6 +18,8 @@ dependencies:
   google_fonts: ^6.1.0
   shared_preferences: ^2.0.18
   gap: ^3.0.0
+  firebase_core: ^2.24.2
+  firebase_analytics: ^10.7.4
 
 dev_dependencies:
   build_runner: ^2.3.3

@@ -1,9 +1,11 @@
 import 'dart:async';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:layout/layout.dart';
 import 'package:personal_portfolio/core/lang/lang.dart';
+import 'package:personal_portfolio/firebase_options.dart';
 import 'package:personal_portfolio/routes/routes.dart';
 import 'package:personal_portfolio/theme/theme.dart';
 import 'package:provider/provider.dart';
@@ -18,6 +20,9 @@ void main() async {
 Future _initApp() async {
   final futures = <Future>[
     EasyLocalization.ensureInitialized(),
+    Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    )
   ];
   RouteApp.initRoutes();
   EasyLocalization.logger.enableBuildModes = [];
