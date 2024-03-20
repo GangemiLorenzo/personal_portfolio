@@ -8,7 +8,6 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  aura_box: ^1.0.2
   flutter:
     sdk: flutter
   easy_localization: ^3.0.1

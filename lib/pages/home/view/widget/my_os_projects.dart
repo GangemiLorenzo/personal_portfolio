@@ -1,4 +1,3 @@
-import 'package:aura_box/aura_box.dart';
 import 'package:flutter/material.dart';
 import 'package:game_of_life/game_of_life.dart';
 import 'package:personal_portfolio/common/project_item.dart';
@@ -23,43 +22,6 @@ class MyOSProjects extends StatelessWidget {
             LocaleKeys.chip_flutter.tr(),
             LocaleKeys.chip_shaders.tr(),
           ],
-          contentWidget: AuraBox(
-            decoration: const BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.all(
-                Radius.circular(16),
-              ),
-            ),
-            spots: [
-              AuraSpot(
-                color: Colors.purple.shade300,
-                radius: 500,
-                alignment: const Alignment(0, 0.9),
-                blurRadius: 50,
-              ),
-              AuraSpot(
-                color: Colors.deepPurple.shade100,
-                radius: 400,
-                alignment: const Alignment(-1.2, 1.2),
-                blurRadius: 50,
-              ),
-              AuraSpot(
-                color: Colors.indigo.shade700,
-                radius: 400,
-                alignment: const Alignment(-0.5, -1.2),
-                blurRadius: 50,
-              ),
-              AuraSpot(
-                color: Colors.purpleAccent.shade700,
-                radius: 300,
-                alignment: const Alignment(1.2, -1.2),
-                blurRadius: 100,
-              ),
-            ],
-            child: Container(
-              height: 250,
-            ),
-          ),
         ),
         ProjectItem(
           title: LocaleKeys.project_game_of_life_title.tr(),
