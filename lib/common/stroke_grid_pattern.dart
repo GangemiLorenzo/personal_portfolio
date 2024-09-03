@@ -88,22 +88,22 @@ class _StrokeGridPatternState extends State<StrokeGridPattern>
       onHover: (event) {
         RenderBox box = context.findRenderObject() as RenderBox;
         setState(
-          () => {
-            _pointer = box.globalToLocal(event.position),
+          () {
+            _pointer = box.globalToLocal(event.position);
             if (widget.paddingVertical != null ||
                 widget.paddingHorizontal != null)
               _pointer = _pointer.translate(
                 -(widget.paddingHorizontal ?? 0.0),
                 -(widget.paddingVertical ?? 0.0),
-              ),
+              );
           },
         );
       },
       onExit: (event) {
         setState(
-          () => {
-            _position = Offset.zero,
-            _pointer = Offset.zero,
+          () {
+            _position = Offset.zero;
+            _pointer = Offset.zero;
           },
         );
       },

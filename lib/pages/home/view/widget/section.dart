@@ -56,7 +56,7 @@ class Section extends StatelessWidget {
                   Expanded(
                     child: TextButton.icon(
                       style: Theme.of(context).textButtonTheme.style!.copyWith(
-                            backgroundColor: MaterialStateProperty.all<Color>(
+                            backgroundColor: WidgetStateProperty.all<Color>(
                               actionColor!,
                             ),
                           ),

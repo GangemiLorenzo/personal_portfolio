@@ -46,8 +46,6 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-makefile
-
 # Not used widgets
 lib/common/bubble_grid_pattern.dart
 lib/common/card_container.dart

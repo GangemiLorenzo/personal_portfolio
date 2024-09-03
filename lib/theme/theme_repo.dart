@@ -19,7 +19,7 @@ class ThemeRepo extends ChangeNotifier {
     notifyListeners();
   }
 
-  MyThemeColor _themeColor = MyThemeColor.GRASS;
+  MyThemeColor _themeColor = MyThemeColor.WATER;
 
   ThemeMode _themeMode = ThemeMode.dark;
 

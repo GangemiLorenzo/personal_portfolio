@@ -50,6 +50,11 @@ abstract class  LocaleKeys {
   static const chip_rest = 'chip.rest';
   static const chip_performance = 'chip.performance';
   static const chip = 'chip';
+  static const timeline_year_redbull_to = 'timeline.year_redbull_to';
+  static const timeline_year_redbull_from = 'timeline.year_redbull_from';
+  static const timeline_title_redbull = 'timeline.title_redbull';
+  static const timeline_subtitle_redbull = 'timeline.subtitle_redbull';
+  static const timeline_content_redbull = 'timeline.content_redbull';
   static const timeline_year_young_to = 'timeline.year_young_to';
   static const timeline_year_young_from = 'timeline.year_young_from';
   static const timeline_title_young = 'timeline.title_young';
