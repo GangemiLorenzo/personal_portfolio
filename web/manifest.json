@@ -5,10 +5,11 @@
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Flutter web application to showcase my works",
+    "description": "Hey! I'm Lorenzo 👋🏻 Welcome to my personal portfolio.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
-    "icons": [{
+    "icons": [
+        {
             "src": "icons/Icon-192.png",
             "sizes": "192x192",
             "type": "image/png"
