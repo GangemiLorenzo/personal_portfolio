@@ -25,12 +25,16 @@ class $AssetsFontsGen {
 class $AssetsProfileGen {
   const $AssetsProfileGen();
 
+  /// File path: assets/profile/old_profile.jpeg
+  AssetGenImage get oldProfile =>
+      const AssetGenImage('assets/profile/old_profile.jpeg');
+
   /// File path: assets/profile/profile.jpeg
   AssetGenImage get profile =>
       const AssetGenImage('assets/profile/profile.jpeg');
 
   /// List of all assets
-  List<AssetGenImage> get values => [profile];
+  List<AssetGenImage> get values => [oldProfile, profile];
 }
 
 class $AssetsProjectsGen {

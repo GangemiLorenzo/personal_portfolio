@@ -16,7 +16,7 @@ class MyEmployment extends StatelessWidget {
           to: LocaleKeys.timeline_year_redbull_to.tr(),
           title: LocaleKeys.timeline_title_redbull.tr(),
           subtitle: LocaleKeys.timeline_subtitle_redbull.tr(),
-          //content: LocaleKeys.timeline_content_redbull.tr(),
+          content: LocaleKeys.timeline_content_redbull.tr(),
           style: TimelineItemStyle.primary,
           chips: [
             LocaleKeys.chip_flutter.tr(),
