@@ -20,7 +20,9 @@ class RouteApp {
     },
     routes: {
       '/': (_) => TabPage(
-            pageBuilder: (child) => MaterialPage(child: child),
+            pageBuilder: (child) => MaterialPage(
+              child: child,
+            ),
             backBehavior:
                 kIsWeb ? TabBackBehavior.history : TabBackBehavior.none,
             child: const AppScaffold(),
