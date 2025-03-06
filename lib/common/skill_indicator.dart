@@ -52,7 +52,10 @@ class _SkillIndicatorState extends State<SkillIndicator>
             begin: -(widget.animationOffset / 2).round(),
             end: (widget.animationOffset / 2).round())
         .animate(
-      CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
+      CurvedAnimation(
+        parent: _animationController,
+        curve: Curves.easeInOut,
+      ),
     );
     _progress = widget.progress * 10 + _animation.value as int;
 
