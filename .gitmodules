@@ -1,0 +1,3 @@
+[submodule "v2/src/content/blog"]
+	path = v2/src/content/blog
+	url = git@github.com.personal:GangemiLorenzo/blog.git
